@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGo-Medium-AlphaNum.woff2') format('woff2'),
+        url('YuGo-Medium-AlphaNum.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothic-Regular.woff2') format('woff2'),
+        url('YuGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'YuGothic';
+    src: url('YuGothic-Bold.woff2') format('woff2'),
+        url('YuGothic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/DataTables/jquery.dataTables.min.css">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+    <div class="wrapper">
+
+      <div class="header__mb">
+        <div class="header__mb__logout"><a href=""><i class="icon-logout"></i>ログアウト</a></div>
+        <div class="header__mb__logo"><a href=""><img src="images/logo-mb.svg" alt=""></a></div>
+        <div class="header__mb__avatar"><a href=""><img src="images/avatar.png" alt=""></a></div>
+      </div>
+
+      <div class="d-flex">
+
+        <div class="menuLeft">
+          <div class="menuLeft__header">
+            <div class="menuLeft__avatar dnfix__thumb">
+              <a href="">
+                <img src="images/avatar.png" alt="">
+              </a>
+            </div>
+            <p class="menuLeft__username">会員ID●●●●●</p>
+          </div>
+          <div class="menuLeft__content">
+            <div class="main__nav">
+              <ul class="el__menu">
+                <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+                <li><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+                <li class="active"><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+                <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+                <li><a href=""><i class="icon-logout"></i>ログアウト</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="menuLeft__footer text-center">
+            <a href="" class="menuLeft__logo">
+              <img src="images/logo.svg" alt="">
+            </a>
+            <div class="login__nav">
+              <ul class="justify-content-center">
+                <li><a href="">プライバシー</a></li>
+                <li><a href="">利用規約</a></li>
+                <li><a href="">問合せ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc__content -userinfo">
+
+          <div class="row">
+
+            <div class="col-lg-6">
+              <div class="sc__box -userinfo">
+                <div class="sc__box__content">
+                  <div class="el__header">
+                    <h6 class="el__title">個人アカウント</h6>
+                  </div>
+                  <ul class="mb-sm-5 pb-sm-3">
+                    <li class="d-sm-flex -avatar">
+                      <div class="el__label">写真</div>
+                      <div class="ms-auto d-sm-flex align-items-center text-center">
+                        <div class="sc__box__avatar me-sm-4 mb-2 mb-sm-0"><img src="images/avatar.png" alt=""></div>
+                        <a href="">編集</a>
+                      </div>
+                    </li>
+
+                    <li class="d-sm-flex">
+                      <div class="el__label">名前</div>
+                      <div class="ms-auto d-flex text-end">
+                        <p class="me-4">会員ID●●●●●</p>
+                        <a href="" class="ms-auto">編集</a>
+                      </div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="el__label">メール</div>
+                      <div class="ms-auto d-flex text-end">
+                        <p class="me-4">abcdefg@hijklmn.com</p>
+                        <a href=""class="ms-auto">変更</a>
+                      </div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="el__label">パスワード</div>
+                      <div class="ms-auto d-flex text-end">
+                        <p class="me-4">●●●●●●●●●●</p>
+                        <a href=""class="ms-auto">変更</a>
+                      </div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="el__label">2段階認証</div>
+                      <div class="ms-auto text-end d-flex d-sm-block">
+                        <div class="form-check form-switch ms-auto">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <hr class="d-sm-none">
+                  <ul>
+                    <li class="py-sm-4 pb-0">
+                      <h6>解約</h6>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="el__label">アカウントを削除する</div>
+                      <div class="ms-auto text-end">
+                        <a href="">アカウントを削除</a>
+                      </div>
+                    </li>
+                  </ul>
+              
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="sc__box -userinfo">
+                <div class="sc__box__content">
+                  <div class="el__header">
+                    <h6 class="el__title">プラン</h6>
+                  </div>
+                  <ul>
+                    <li class="d-sm-flex">
+                      <div class="el__label">プラン</div>
+                      <div class="ms-auto d-flex">
+                        <p class="me-4">個人プラン</p>
+                        <a href="" class="ms-auto">変更</a>
+                      </div>
+                    </li>
+
+                    <li class="d-sm-flex">
+                      <div class="el__label">支払方法</div>
+                      <div class="ms-auto d-flex">
+                        <p class="me-4">VISA（下4桁：0000）</p>
+                        <a href="" class="ms-auto">更新</a>
+                      </div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="el__label">支払期間</div>
+                      <div class="ms-auto d-flex">
+                        <p class="me-4">年間プラン（2021.2〜2022.2）</p>
+                        <a href="" class="ms-auto">変更</a>
+                      </div>
+                    </li>
+                    <li>
+                      <p class="el__label mt-4 mb-4">支払履歴</p>
+                      <table id="table_userinfo" class="table">
+                        <thead>
+                          <tr>
+                            <th>日付</th>
+                            <th class="no-sort">項目</th>
+                            <th class="no-sort text-end">金額</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>2021.3</td>
+                            <td>個人プラン</td>
+                            <td class="d-sm-flex text-end">
+                              <span class="ms-3 d-block d-sm-inline-block order-sm-3">¥00.000</span>
+                              <a href="" class="ms-auto me-2 order-sm-2">領収書</a>
+                              <a href="" class="order-sm-2">請求書</a>
+                              
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2021.4</td>
+                            <td>個人プラン</td>
+                            <td class="d-sm-flex text-end">
+                              <span class="ms-3 d-block d-sm-inline-block order-sm-3">¥00.000</span>
+                              <a href="" class="ms-auto me-2 order-sm-2">領収書</a>
+                              <a href="" class="order-sm-2">請求書</a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>2021.2</td>
+                            <td>個人プラン</td>
+                            <td class="d-sm-flex text-end">
+                              <span class="ms-3 d-block d-sm-inline-block order-sm-3">¥00.000</span>
+                              <a href="" class="ms-auto me-2 order-sm-2">領収書</a>
+                              <a href="" class="order-sm-2">請求書</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p class="mt-4 text-center">
+                        <a href=""  class="ms-auto -text-registered"><i class="icon-list"></i> その他の支払い履歴を見る</a>
+                      </p>
+                    </li>
+                  </ul>
+
+                  
+                </div>
+              </div> <!-- .sc__box -->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nav__mobile">
+        <ul class="nav__mobile--ul">
+          <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+          <li><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+          <li class="active"><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+          <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+          <li><a href=""><i class="icon-dots"></i>その他</a></li>
+        </ul>
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/libs/DataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/libs/DataTables/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

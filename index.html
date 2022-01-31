@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+    <div class="wrapper">
+
+      <div class="header__mb">
+        <div class="header__mb__logout"><a href=""><i class="icon-logout"></i>ログアウト</a></div>
+        <div class="header__mb__logo"><a href=""><img src="images/logo-mb.svg" alt=""></a></div>
+        <div class="header__mb__avatar"><a href=""><img src="images/avatar.png" alt=""></a></div>
+      </div>
+
+      <div class="d-flex">
+
+        <div class="menuLeft">
+          <div class="menuLeft__header">
+            <div class="menuLeft__avatar dnfix__thumb">
+              <a href="">
+                <img src="images/avatar.png" alt="">
+              </a>
+            </div>
+            <p class="menuLeft__username">会員ID●●●●●</p>
+          </div>
+          <div class="menuLeft__content">
+            <div class="main__nav">
+              <ul class="el__menu">
+                <li class="active"><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+                <li><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+                <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+                <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+                <li><a href=""><i class="icon-logout"></i>ログアウト</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="menuLeft__footer text-center">
+            <a href="" class="menuLeft__logo">
+              <img src="images/logo.svg" alt="">
+            </a>
+            <div class="login__nav">
+              <ul class="justify-content-center">
+                <li><a href="">プライバシー</a></li>
+                <li><a href="">利用規約</a></li>
+                <li><a href="">問合せ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc__content">
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="sc__box">
+                <div class="sc__box__header d-sm-flex align-items-center text-center">
+                  <h4 class="sc__box__title">登録物件数</h4>
+                  <div class="ms-auto">
+                    <strong class="home__registered__amount">12</strong> <small>件</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="sc__box -table-home">
+                <div class="sc__box__header -small d-flex align-items-center">
+                  <h6 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal"></i>最新登録物件</h6>
+                  <div class="ms-auto -text-registered d-none d-md-block">
+                    <i class="icon-list"></i> 物件一覧を見る
+                  </div>
+                </div>
+
+                <table class="table table-striped -home">
+                  <tbody>
+                    <tr>
+                      <td>0000012</td>
+                      <td>マンション事例</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                    </tr>
+                    <tr>
+                      <td>0000011</td>
+                      <td>造成事例</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                    </tr>
+                    <tr>
+                      <td>0000010</td>
+                      <td>賃貸事例</td>
+                      <td><a href=""class="el__cat">建物</a></td>
+                    </tr>
+                    <tr>
+                      <td>0000009</td>
+                      <td>取引事例</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                    </tr>
+                    <tr>
+                      <td>0000008</td>
+                      <td>競売</td>
+                      <td><a href="" class="el__cat">土地・建物</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="sc__box__content">
+                  <div class="text-center">
+                    <a href="" class="btn -plus">新しく物件を登録する</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="row">
+                <div class="col-6">
+                  <div class="sc__box">
+                    <div class="sc__box__content text-center">
+                      <div class="sc__box__icon">
+                        <i class="icon-bar-chart"></i>
+                      </div>
+                      <h6>地価データ参照</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="sc__box">
+                    <div class="sc__box__content text-center">
+                      <div class="sc__box__icon">
+                        <i class="icon-calculator"></i>
+                      </div>
+                      <h6>時点修正率査定</h6>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="sc__box">
+                    <div class="sc__box__content text-center">
+                      <div class="sc__box__icon">
+                        <i class="icon-print"></i>
+                      </div>
+                      <h6 class="mb-4">調査資料一覧印刷（PDF）</h6>
+
+                      <a href="" class="btn -secondary">出力する</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="nav__mobile">
+        <ul class="nav__mobile--ul">
+          <li class="active"><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+          <li><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+          <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+          <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+          <li><a href=""><i class="icon-dots"></i>その他</a></li>
+        </ul>
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

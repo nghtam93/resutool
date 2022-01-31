@@ -1,0 +1,1248 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/DataTables/jquery.dataTables.min.css">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+    <div class="wrapper">
+
+      <div class="header__mb">
+        <div class="header__mb__logout"><a href=""><i class="icon-logout"></i>ログアウト</a></div>
+        <div class="header__mb__logo"><a href=""><img src="images/logo-mb.svg" alt=""></a></div>
+        <div class="header__mb__avatar"><a href=""><img src="images/avatar.png" alt=""></a></div>
+      </div>
+
+      <div class="d-flex">
+
+        <div class="menuLeft">
+          <div class="menuLeft__header">
+            <div class="menuLeft__avatar dnfix__thumb">
+              <a href="">
+                <img src="images/avatar.png" alt="">
+              </a>
+            </div>
+            <p class="menuLeft__username">会員ID●●●●●</p>
+          </div>
+          <div class="menuLeft__content">
+            <div class="main__nav">
+              <ul class="el__menu">
+                <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+                <li class="active"><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+                <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+                <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+                <li><a href=""><i class="icon-logout"></i>ログアウト</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="menuLeft__footer text-center">
+            <a href="" class="menuLeft__logo">
+              <img src="images/logo.svg" alt="">
+            </a>
+            <div class="login__nav">
+              <ul class="justify-content-center">
+                <li><a href="">プライバシー</a></li>
+                <li><a href="">利用規約</a></li>
+                <li><a href="">問合せ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc__content">
+
+          <div class="sc__box mb-4">
+            <div class="sc__box__header -small d-flex align-items-center">
+              <h4 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal"></i>最新登録物件</h4>
+            </div>
+            <div class="accordion" id="accordionBukken">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    基本情報
+                  </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1">
+                  <div class="accordion-body">
+                    
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">管理番号</div></div>
+                      <div class="col-lg-80">
+                        <div class="input__wrap">
+                        <input type="number" class="el__input">
+                      </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">業務区分</div></div>
+                      <div class="col-lg-80">
+                        <input type="number" class="el__input">
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">対象区分</div></div>
+                      <div class="col-lg-80">
+                        <input type="number" class="el__input">
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">年度</div></div>
+                      <div class="col-lg-80 d-flex align-items-center">
+                        <input type="number" class="el__input"> <span class="text-nowrap ms-3">年度</span>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">公募資料</div></div>
+                      <div class="col-lg-80">
+
+                        <div class="table__fake mb-4">
+                            <div class="table__fake__header">
+                              <div class="row gx-0">
+                                <div class="col-8 pe-3">
+                                  <div class="table__fake__th">ファイル名</div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="table__fake__th">更新日</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table__fake__content">
+                              <div class="table__fake__tr row gx-0">
+                                <div class="col-8 pe-3">
+                                  <div class="table__fake__td">
+                                    <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="table__fake__td d-flex">
+                                    <span>2021.12.13</span>
+                                    <div class="ms-auto">
+                                      <span class="icon-trash"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="table__fake__tr row gx-0">
+                                <div class="col-8 pe-3">
+                                  <div class="table__fake__td">
+                                    <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="table__fake__td d-flex">
+                                    <span>2021.12.13</span>
+                                    <div class="ms-auto">
+                                      <span class="icon-trash"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          
+                            </div>
+                        </div> <!-- .table__fake -->
+
+                        <button class="btn -s2"><i class="icon-data-capture"></i> 公募資料アップロード</button>
+                      </div>
+                    </div><!-- .row -->
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                    対象地
+                  </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2">
+                  <div class="accordion-body">
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">対象地特定</div></div>
+                      <div class="col-lg-80">
+                        <button type="button"  class="btn -s2 me-4 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button class="btn -s2 mb-3"><i class="icon-map-marker"></i> 住所で特定</button>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">地番</div></div>
+                      <div class="col-lg-2">
+                        <input type="number" class="el__input w-100">
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">都道府県／市区町村 CD</div></div>
+                      <div class="col-lg-3">
+                        <input type="number" class="el__input w-100">
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">所在地</div></div>
+                      <div class="col-lg-5">
+                        <input type="number" class="el__input w-100">
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                    測定・計測
+                  </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3">
+                  <div class="accordion-body">
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">地積</div></div>
+                      <div class="col-lg-80">
+                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button class="btn -s2 mb-4"><i class="icon-map-marker"></i> 住所で特定</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-6">
+                            <div class="m2__line d-flex">
+                              <span>地積</span>
+                              <span class="ms-auto">100.0</span>㎡
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">間口／奥行き</div></div>
+                      <div class="col-lg-80">
+                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-picture"></i> 航空写真で概測</button>
+                        <button class="btn -s2 mb-4"><i class="icon-map-marker2"></i> その他図面で計測</button>
+                        <div class="row pt-3">
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>間口</span>
+                              <span class="ms-auto m2__line__amount">15.30</span>㎡
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>奥行き</span>
+                              <span class="ms-auto m2__line__amount">18.50</span>㎡
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">間口／奥行き</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-judgment"></i> 測定する</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-6">
+                            <div class="m2__line d-flex">
+                              <span>標高</span>
+                              <span class="ms-auto m2__line__amount">2.30</span>㎡
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">形状判定・陰地割合測定</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-object"></i> 測定する</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>整形地面積</span>
+                              <span class="ms-auto m2__line__amount">120.0</span>㎡
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>陰地割合</span>
+                              <span class="ms-auto m2__line__amount">83</span>%
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>形状判定</span>
+                              <span class="ms-auto m2__line__amount">不整形</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">街路条件判定／幅員測定</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-road"></i> 判定／測定する</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-12 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>接面状況区分</span>
+                              <span class="ms-auto m2__line__amount">二方路</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <table class="table -st3  mb-4">
+                              <thead>
+                                <tr>
+                                  <th>接面道路区分①</th>
+                                  <th>前面道路</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>方位</td>
+                                  <td>南</td>
+                                </tr>
+                                <tr>
+                                  <td>種類</td>
+                                  <td>国道</td>
+                                </tr>
+                                <tr>
+                                  <td>名称</td>
+                                  <td>—</td>
+                                </tr>
+                                <tr>
+                                  <td>建築基準法上の区分</td>
+                                  <td>第42条1項1号</td>
+                                </tr>
+                                <tr>
+                                  <td>道路幅員</td>
+                                  <td>36.0㎡</td>
+                                </tr>
+                                <tr>
+                                  <td>セットバック</td>
+                                  <td>不要</td>
+                                </tr>
+                                <tr>
+                                  <td>歩道</td>
+                                  <td>有</td>
+                                </tr>
+                                <tr>
+                                  <td>舗装の種類</td>
+                                  <td>アスファルト</td>
+                                </tr>
+                                <tr>
+                                  <td>舗装の状態</td>
+                                  <td>優</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-md-6">
+                            <table class="table -st3 mb-4">
+                              <thead>
+                                <tr>
+                                  <th>接面道路区分②</th>
+                                  <th>背面道路</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>方位</td>
+                                  <td>北</td>
+                                </tr>
+                                <tr>
+                                  <td>種類</td>
+                                  <td>市道</td>
+                                </tr>
+                                <tr>
+                                  <td>名称</td>
+                                  <td>上町14号線</td>
+                                </tr>
+                                <tr>
+                                  <td>建築基準法上の区分</td>
+                                  <td>道路にあらず</td>
+                                </tr>
+                                <tr>
+                                  <td>道路幅員</td>
+                                  <td>4,50㎡</td>
+                                </tr>
+                                <tr>
+                                  <td>セットバック</td>
+                                  <td>不要</td>
+                                </tr>
+                                <tr>
+                                  <td>歩道</td>
+                                  <td>無</td>
+                                </tr>
+                                <tr>
+                                  <td>舗装の種類</td>
+                                  <td>アスファルト</td>
+                                </tr>
+                                <tr>
+                                  <td>舗装の状態</td>
+                                  <td>普通</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">接近性測定</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-judgment"></i> 判定／測定する</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-6">
+                            <table class="table -st3  mb-4">
+                              <thead>
+                                <tr>
+                                  <th>交通／接近条件①</th>
+                                  <th>駅</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>路線名</td>
+                                  <td>JR土讃線</td>
+                                </tr>
+                                <tr>
+                                  <td>最寄駅</td>
+                                  <td>旭駅</td>
+                                </tr>
+                                <tr>
+                                  <td>直線距離</td>
+                                  <td>772m</td>
+                                </tr>
+                                <tr>
+                                  <td>交通手段</td>
+                                  <td>自動車（最短距離探索）</td>
+                                </tr>
+                                <tr>
+                                  <td>道のり距離</td>
+                                  <td>1.0km</td>
+                                </tr>
+                                <tr>
+                                  <td>所要時間</td>
+                                  <td>3分</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="col-md-6">
+                            <table class="table -st3  mb-4">
+                              <thead>
+                                <tr>
+                                  <th>交通／接近条件②</th>
+                                  <th>バス停</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>路線名</td>
+                                  <td>高岡線</td>
+                                </tr>
+                                <tr>
+                                  <td>最寄駅</td>
+                                  <td>上町五丁目</td>
+                                </tr>
+                                <tr>
+                                  <td>直線距離</td>
+                                  <td>95m</td>
+                                </tr>
+                                <tr>
+                                  <td>交通手段</td>
+                                  <td>徒歩</td>
+                                </tr>
+                                <tr>
+                                  <td>道のり距離</td>
+                                  <td>94m</td>
+                                </tr>
+                                <tr>
+                                  <td>所要時間</td>
+                                  <td>1分</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">近隣地域判定</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-crosshairs"></i> 判定／測定する</button>
+                        <div class="row pt-3 pb-3">
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>北</span>
+                              <span class="ms-auto m2__line__amount">22.00m</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>南</span>
+                              <span class="ms-auto m2__line__amount">18.00m</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>西</span>
+                              <span class="ms-auto m2__line__amount">22.00m</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>東</span>
+                              <span class="ms-auto m2__line__amount">40.00m</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr>
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">標準的画地判定</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-object"></i> 判定／測定する</button>
+                        <div class="row pt-3">
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>間口</span>
+                              <span class="ms-auto m2__line__amount">15.30</span>㎡
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>奥行き</span>
+                              <span class="ms-auto m2__line__amount">20.00</span>㎡
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="m2__line d-flex">
+                              <span>面積</span>
+                              <span class="ms-auto m2__line__amount">300.00</span>㎡
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                    行政的条件
+                  </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">都市計画区域</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="">
+                          <option value="">都市計画区域内（市街化区域）</option>
+                          <option value="">都市計画区域内（市街化区域）</option>
+                          <option value="">都市計画区域内（市街化区域）</option>
+                          <option value="">都市計画区域内（市街化区域）</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">用途地域</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="">
+                          <option value="">商業</option>
+                          <option value="">商業 商業</option>
+                          <option value="">商業 商業</option>
+                          <option value="">商業 商業</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">建ぺい率</div></div>
+                      <div class="col-lg-80">
+                        <div class="d-sm-flex">
+                          <span class="d-flex align-items-center mb-4 me-sm-3">
+                            <span class="text-nowrap me-3">指定</span> <input type="number" class="el__input mw70px me-2" value="80"> %
+                          </span>
+                          <div class="vr d-none d-sm-inline-block"></div>
+                          <span class="d-flex align-items-center mb-4 me-sm-3">
+                            <span class="text-nowrap me-3">基準</span> <input type="number" class="el__input mw70px me-2" value="80"> %
+                          </span>
+                        </div>
+                        <div>
+                          <span class="me-sm-3 mb-3 d-inline-block">防火地域で耐火建築・角地等・面積加重</span> <input type="number" class="el__input" value="">
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">容積率</div></div>
+                      <div class="col-lg-80">
+                        <div class="mb-3">
+                          <span class="d-flex align-items-center  mb-4 pe-sm-2">
+                            <span class="text-nowrap me-3">指定</span> <input type="number" class="el__input mw70px me-2" value="400"> %
+                          </span>
+                          <span class="d-flex align-items-center mb-4">
+                            <span class="text-nowrap me-3">基準</span> <input type="number" class="el__input mw70px me-2" value="400"> %
+                          </span>
+                        </div>
+                        <div>
+                          <span class="me-3 mb-3 d-inline-block">前面道路幅員・面積加重・特定道路距離</span> <input type="number" class="el__input" value="">
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">防火規制</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="">
+                          <option value="">ない</option>
+                          <option value="">ない ない</option>
+                          <option value="">ない ない</option>
+                          <option value="">ない ない</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label mt-2">日影規制</div></div>
+                      <div class="col-lg-80">
+
+                        <ul class="checkbox__list d-sm-flex align-items-center mt-2 mb-4">
+                          <li class="mb-3 mb-sm-0">
+                            <input class="" type="checkbox" value="" id="flexCheckDefault1">
+                            <label class="form-check-label" for="flexCheckDefault1">一</label>
+                          </li>
+                          <li class="mb-3 mb-sm-0">
+                            <input class="" type="checkbox" value="" id="flexCheckDefault2">
+                            <label class="form-check-label" for="flexCheckDefault2">二</label>
+                          </li>
+                          <li class="mb-3 mb-sm-0">
+                            <input class="" type="checkbox" value="" id="flexCheckDefault3">
+                            <label class="form-check-label" for="flexCheckDefault3">三</label>
+                          </li>
+                        </ul>
+
+                        <div class="d-sm-flex">
+                          <div class="me-sm-4 mb-4 d-flex align-items-center">
+                            <input type="text" class="el__input -small mw90px me-3"> h
+                          </div>
+                          <div class="me-sm-4 mb-4 d-flex align-items-center">
+                            <input type="text" class="el__input -small mw90px me-3"> h
+                          </div>
+                          <div class="mb-4 d-flex align-items-center">
+                            <input type="text" class="el__input -small mw90px me-3"> m
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">その他</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="">
+                          <option value="">ない</option>
+                          <option value="">ない ない</option>
+                          <option value="">ない ない</option>
+                          <option value="">ない ない</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">土砂災害</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="">
+                          <option value="">ない</option>
+                          <option value="">ない ない ない</option>
+                          <option value="">ない ない ない</option>
+                          <option value="">ない ない ない ない ない ない</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">周知の埋蔵文化財包蔵地</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class=" mb-4">
+                          <option value="">ない</option>
+                          <option value="">ない ない ない</option>
+                          <option value="">ない ない ない</option>
+                          <option value="">ない ない ない </option>
+                        </select>
+
+                        <div>
+                          <span class="me-3">名称</span>
+                          <input type="text" class="el__input col-6 d-inline-block">
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                    供給施設
+                  </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse show" aria-labelledby="heading5">
+                  <div class="accordion-body">
+                    
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">水道</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="mw170px">
+                          <option value="">引込済（上水道）</option>
+                          <option value="">引込済（上水道）</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">公共下水道</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="mw170px">
+                          <option value="">接続済み</option>
+                          <option value="">接続済み</option>
+                        </select>
+                        <hr>
+                        <p class="mb-3">■受益者負担金</p>
+                        <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault4" checked>
+                            <label class="form-check-label" for="flexCheckDefault4">済み</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault5">
+                            <label class="form-check-label" for="flexCheckDefault5">未済</label>
+                          </li>
+                        </ul>
+                        <div class="d-sm-flex align-items-center">
+                          <span class="me-3 text-nowrap">未払額</span> <input type="text" class="el__input me-3"> 円
+                        </div>
+
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">都市ガス</div></div>
+                      <div class="col-lg-80">
+                        <select name="" id="" class="mw170px">
+                          <option value="">引込済</option>
+                          <option value="">引込済</option>
+                        </select>
+                      </div>
+                    </div><!-- .row -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                    その他
+                  </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse show" aria-labelledby="heading6">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">土壌汚染</div></div>
+                      <div class="col-lg-80">
+                        <span class="me-3 mb-3 d-inline-block">業種</span>
+                        <input type="text" value="ー" class="el__input">
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-20"><div class="el__label mt-0">特定施設届出</div></div>
+                      <div class="col-lg-80">
+                        <p class="mb-3">■水質汚濁防止法・下水道法の特定施設</p>
+                        
+                        <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault4">
+                            <label class="form-check-label" for="flexCheckDefault4">該当</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault5" checked>
+                            <label class="form-check-label" for="flexCheckDefault5">非該当</label>
+                          </li>
+                        </ul>
+
+                        <div class="mb-4">
+                          <span class="me-3 mb-3 d-inline-block">物質名</span>
+                          <input type="text" value="" class="el__input col-md-6">
+                        </div>
+                        <hr>
+                        <p class="mb-3 d-inline-block">■有害物質使用特定施設</p>
+                        
+                        <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault4">
+                            <label class="form-check-label" for="flexCheckDefault4">該当</label>
+                          </li>
+                          <li>
+                            <input type="checkbox" value="" id="flexCheckDefault5" checked>
+                            <label class="form-check-label" for="flexCheckDefault5">非該当</label>
+                          </li>
+                        </ul>
+                        <div class="">
+                          <span class="me-3 mb-3 d-inline-block">物質名</span>
+                          <input type="text" value="" class="el__input col-md-6">
+                        </div>
+
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                    現況写真
+                  </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse show" aria-labelledby="heading7">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">遠景写真登録</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-camera"></i> 画像アップロード</button>
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">近景写真登録</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-camera"></i> 画像アップロード</button>
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                    地歴調査
+                  </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse show" aria-labelledby="heading8">
+                  <div class="accordion-body">
+                    <div class="row pt-3">
+                      <div class="col-lg-20"><div class="el__label">地歴</div></div>
+                      <div class="col-lg-80">
+                        
+                        <div class="clone__wrap">
+
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S27.1.1（1952.1.1）</option>
+                                <option value="">S27.1.1（1952.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="歯科医院">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S34.1.1（1959.1.1）</option>
+                                <option value="">S34.1.1（1959.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="歯科医院、医師会館">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S43.1.1（1968.1.1）</option>
+                                <option value="">S43.1.1（1968.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="歯科医院、車庫">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S50.1.1（1975.1.1）</option>
+                                <option value="">S50.1.1（1975.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="RKCショールーム、駐車場">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S54.1.1（1979.1.1）</option>
+                                <option value="">S54.1.1（1979.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="RKCショールーム、駐車場">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S58.1.1（1983.1.1）</option>
+                                <option value="">S58.1.1（1983.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="書店、駐車場">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">S64.1.1（1989.1.1）</option>
+                                <option value="">S64.1.1（1989.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="RKC事務所、駐車場">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">H7.1.1（1995.1.1）</option>
+                                <option value="">H7.1.1（1995.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="現在のビル建築中">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">H12.1.1（2000.1.1）</option>
+                                <option value="">H12.1.1（2000.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="現在のビル">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">H20.1.1（2008.1.1）</option>
+                                <option value="">H20.1.1（2008.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="現在のビル">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          <div class="el__clone row">
+                            <div class="col-auto mb-3 mb-md-0">
+                              <select name="" id="" class="mw170px">
+                                <option value="">H28.1.1（2016.1.1）</option>
+                                <option value="">H28.1.1（2016.1.1）</option>
+                              </select>
+                            </div>
+                            <div class="col flex-grow-1 mb-3 mb-md-0">
+                              <input type="text" class="el__input w-100" value="現在のビル">
+                            </div>
+                            <div class="col-auto ms-auto d-flex">
+                              <button class="el__clone--plus me-2">追加</button>
+                              <button class="el__clone--remove">削除</button>
+                            </div>
+                          </div> <!-- .el__clone -->
+                          
+                        </div>  <!-- .clone__wrap -->
+                        <div class="mt-5 pb-4 text-center text-sm-start">
+                          <a href="" class="clone__wrap--plus"><i class="icon-plus"></i> 項目を追加する</a>
+                        </div>
+                        
+                      </div>
+                    </div><!-- .row -->
+
+                    <hr>
+                    <div class="row">
+                      <div class="col-lg-20"><div class="el__label">近景写真登録</div></div>
+                      <div class="col-lg-80">
+                        <button class="btn -s2 me-4 mb-4"><i class="icon-camera"></i> 画像アップロード</button>
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div> <!-- .sc__content -->
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade modal-s1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map"></span> 法第14条地図で特定</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-5">
+                <div class="col-md-6 -col-left d-none d-lg-block">
+                  <p class="mb-4">新しく公図をアップロード</p>
+
+                  <div class="modal__picture" style="background-image:url(images/modal-media-thumb.jpg);">
+                    <div class="modal__picture__content">
+                      <p class="mb-4">ここにファイルをドラッグ＆ドロップ</p>
+                      <p class="mb-4">または</p>
+                      <button type="button" class="btn -s2"><i class="icon-data-capture"></i> ファイルを選択</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 -col-right">
+                  <p class="mb-4">アップロード済みの公図を選択</p>
+
+                  <div class="table__fake mb-4 -modal">
+                    <div class="table__fake__header">
+                      <div class="row gx-0">
+                        <div class="col-8 pe-3">
+                          <div class="table__fake__th ps-3">ファイル名</div>
+                        </div>
+                        <div class="col-4">
+                          <div class="table__fake__th">更新日</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table__fake__content">
+                      <div class="table__fake__tr row gx-0">
+                        <div class="col-8 pe-3">
+                          <div class="table__fake__td">
+                            <span class="text__truncate"><input class="form-check-input" type="checkbox" value=""> ファイル名ダミーですテキストダミー.pdf</span>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="table__fake__td d-flex">
+                            <span>2021.12.13</span>
+                            <div class="ms-auto">
+                              <span class="icon-trash"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="table__fake__tr row gx-0">
+                        <div class="col-8 pe-3">
+                          <div class="table__fake__td">
+                            <span class="text__truncate"><input class="form-check-input" type="checkbox" value=""> ファイル名ダミーですテキストダミー.pdf</span>
+                          </div>
+                        </div>
+                        <div class="col-4">
+                          <div class="table__fake__td d-flex">
+                            <span>2021.12.13</span>
+                            <div class="ms-auto">
+                              <span class="icon-trash"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div> <!-- .table__fake -->
+                  <div class="text-center">
+                    <button type="button" class="btn -s2 -modal">次へ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <ul class="block__bukkenfix d-none d-md-block">
+        <li>
+          <a href="">
+            <i class="icon-plus"></i>
+            <p>保存</p>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mb__bukkenfix d-md-none">
+        <ul class="row gx-0">
+          <li class="col-6">
+            <a href=""><i class="icon-angle-right rotate-180"></i> 戻る</a>
+          </li>
+          <li class="col-6 -right">
+            <a href=""><i class="icon-plus"></i> 保存</a>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/libs/DataTables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="assets/libs/DataTables/dataTables.bootstrap5.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
