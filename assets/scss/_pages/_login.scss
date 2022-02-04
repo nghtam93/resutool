@@ -149,7 +149,9 @@
 			.el__box.-suggest {
 			    font-size: 11px;
 			}
-
+			.el__box.-register {
+				padding: 15px 25px 12px;
+			  }
 		}
 		&__wrapper{
 	    	max-width: 280px;
@@ -164,12 +166,20 @@
 			img{
 				max-height: 74px;
 			}
+			
 		}
+		
 		&__nav{
 		    position: relative;
 		    right: 0;
 		    bottom: 0;
 		    margin-top: 24px;
+			&.-fix {
+				position: relative;
+				bottom: 0;
+				right: 0;
+				width: 100%;
+			  }
 		}
 	}
 }

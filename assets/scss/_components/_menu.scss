@@ -14,7 +14,7 @@
     a{
         position: relative;
         display: block;
-        font-weight: 900;
+        font-weight: 500;
         font-size: 16px;
         line-height: 21px;
         padding: 4px 60px;
@@ -25,6 +25,7 @@
     }
     i{
         width: 20px;
+        font-weight: 400;
         margin-right: 20px;
     }
     .el__menu{
@@ -49,6 +50,9 @@
 
         &>li:hover a, &>li.active a{
             color:$color_primary;
+        }
+        &>li.active a{
+            font-weight: 700;
         }
         &>li:hover>a:after, &>li.active>a:after{
             opacity: 1;
@@ -94,6 +98,7 @@
                     height: 24px;
                     font-size: 24px;
                     margin-bottom: 8px;
+                    font-weight: 400;
                     &.icon-dots {
                         font-size: 6px;
                     }

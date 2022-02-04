@@ -61,7 +61,7 @@
 
           <div class="sc__box mb-4">
             <div class="sc__box__header -small d-flex align-items-center">
-              <h4 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal"></i>最新登録物件</h4>
+              <h4 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal"></i>新規物件登録</h4>
             </div>
             <div class="accordion" id="accordionBukken">
               <div class="accordion-item">
@@ -76,30 +76,44 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">管理番号</div></div>
                       <div class="col-lg-80">
-                        <div class="input__wrap">
-                        <input type="number" class="el__input">
-                      </div>
+                          <input type="text" class="el__input mw170px">
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">業務区分</div></div>
                       <div class="col-lg-80">
-                        <input type="number" class="el__input">
+                        <select name="" id="" class="el__input minw170px">
+                          <option value=""></option>
+                          <option value="">業務区分</option>
+                          <option value="">業務区分</option>
+                          <option value="">業務区分</option>
+                        </select>
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">対象区分</div></div>
                       <div class="col-lg-80">
-                        <input type="number" class="el__input">
+                        <select name="" id="" class="el__input minw170px">
+                          <option value=""></option>
+                          <option value="">対象区分</option>
+                          <option value="">対象区分</option>
+                          <option value="">対象区分</option>
+                        </select>
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">年度</div></div>
                       <div class="col-lg-80 d-flex align-items-center">
-                        <input type="number" class="el__input"> <span class="text-nowrap ms-3">年度</span>
+                        <select name="" id="" class="el__input minw100px">
+                          <option value=""></option>
+                          <option value="">対象区分</option>
+                          <option value="">対象区分</option>
+                          <option value="">対象区分</option>
+                        </select>
+                        <span class="text-nowrap ms-3">年度</span>
                       </div>
                     </div><!-- .row -->
                     <hr>
@@ -110,22 +124,22 @@
                         <div class="table__fake mb-4">
                             <div class="table__fake__header">
                               <div class="row gx-0">
-                                <div class="col-8 pe-3">
+                                <div class="col-6 col-sm-8 pe-3">
                                   <div class="table__fake__th">ファイル名</div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6 col-sm-4">
                                   <div class="table__fake__th">更新日</div>
                                 </div>
                               </div>
                             </div>
                             <div class="table__fake__content">
                               <div class="table__fake__tr row gx-0">
-                                <div class="col-8 pe-3">
+                                <div class="col-6 col-sm-8 pe-3">
                                   <div class="table__fake__td">
                                     <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
                                   </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6 col-sm-4">
                                   <div class="table__fake__td d-flex">
                                     <span>2021.12.13</span>
                                     <div class="ms-auto">
@@ -136,12 +150,12 @@
                               </div>
 
                               <div class="table__fake__tr row gx-0">
-                                <div class="col-8 pe-3">
+                                <div class="col-6 col-sm-8 pe-3">
                                   <div class="table__fake__td">
                                     <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
                                   </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-6 col-sm-4">
                                   <div class="table__fake__td d-flex">
                                     <span>2021.12.13</span>
                                     <div class="ms-auto">
@@ -180,21 +194,21 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">地番</div></div>
                       <div class="col-lg-2">
-                        <input type="number" class="el__input w-100">
+                        <input type="text" class="el__input w-100">
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">都道府県／市区町村 CD</div></div>
                       <div class="col-lg-3">
-                        <input type="number" class="el__input w-100">
+                        <input type="text" class="el__input w-100">
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">所在地</div></div>
                       <div class="col-lg-5">
-                        <input type="number" class="el__input w-100">
+                        <input type="text" class="el__input w-100">
                       </div>
                     </div><!-- .row -->
                   </div>
@@ -217,7 +231,7 @@
                           <div class="col-md-6">
                             <div class="m2__line d-flex">
                               <span>地積</span>
-                              <span class="ms-auto">100.0</span>㎡
+                              <span class="ms-auto m2__line__amount">100.00</span>㎡
                             </div>
                           </div>
                         </div>
@@ -248,7 +262,7 @@
                     </div> <!-- .row -->
                     <hr>
                     <div class="row pt-3">
-                      <div class="col-lg-20"><div class="el__label">間口／奥行き</div></div>
+                      <div class="col-lg-20"><div class="el__label">標高測定</div></div>
                       <div class="col-lg-80">
                         <button class="btn -s2 me-4 mb-4"><i class="icon-judgment"></i> 測定する</button>
                         <div class="row pt-3 pb-3">
@@ -305,7 +319,7 @@
                               <thead>
                                 <tr>
                                   <th>接面道路区分①</th>
-                                  <th>前面道路</th>
+                                  <th>前面道路 <i class="icon-arrow-up"></i></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -353,7 +367,7 @@
                               <thead>
                                 <tr>
                                   <th>接面道路区分②</th>
-                                  <th>背面道路</th>
+                                  <th>背面道路 <i class="icon-arrow-up"></i></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -410,7 +424,7 @@
                               <thead>
                                 <tr>
                                   <th>交通／接近条件①</th>
-                                  <th>駅</th>
+                                  <th>駅 <i class="icon-arrow-up"></i></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -446,7 +460,7 @@
                               <thead>
                                 <tr>
                                   <th>交通／接近条件②</th>
-                                  <th>バス停</th>
+                                  <th>バス停 <i class="icon-arrow-up"></i></th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -580,15 +594,15 @@
                       <div class="col-lg-80">
                         <div class="d-sm-flex">
                           <span class="d-flex align-items-center mb-4 me-sm-3">
-                            <span class="text-nowrap me-3">指定</span> <input type="number" class="el__input mw70px me-2" value="80"> %
+                            <span class="text-nowrap me-3">指定</span> <input type="text" class="el__input mw70px me-2 text-end" value="80"> %
                           </span>
                           <div class="vr d-none d-sm-inline-block"></div>
                           <span class="d-flex align-items-center mb-4 me-sm-3">
-                            <span class="text-nowrap me-3">基準</span> <input type="number" class="el__input mw70px me-2" value="80"> %
+                            <span class="text-nowrap me-3">基準</span> <input type="text" class="el__input mw70px me-2 text-end" value="80"> %
                           </span>
                         </div>
                         <div>
-                          <span class="me-sm-3 mb-3 d-inline-block">防火地域で耐火建築・角地等・面積加重</span> <input type="number" class="el__input" value="">
+                          <span class="me-sm-3 mb-3 d-inline-block">防火地域で耐火建築・角地等・面積加重</span> <input type="text" class="el__input" value="">
                         </div>
                       </div>
                     </div><!-- .row -->
@@ -596,16 +610,17 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">容積率</div></div>
                       <div class="col-lg-80">
-                        <div class="mb-3">
-                          <span class="d-flex align-items-center  mb-4 pe-sm-2">
-                            <span class="text-nowrap me-3">指定</span> <input type="number" class="el__input mw70px me-2" value="400"> %
+                        <div class="d-sm-flex mb-3">
+                          <span class="d-flex align-items-center mb-4 me-sm-3">
+                            <span class="text-nowrap me-3">指定</span> <input type="text" class="el__input mw70px me-2 text-end" value="400"> %
                           </span>
-                          <span class="d-flex align-items-center mb-4">
-                            <span class="text-nowrap me-3">基準</span> <input type="number" class="el__input mw70px me-2" value="400"> %
+                          <div class="vr d-none d-sm-inline-block"></div>
+                          <span class="d-flex align-items-center mb-4 me-sm-3">
+                            <span class="text-nowrap me-3">基準</span> <input type="text" class="el__input mw70px me-2 text-end" value="400"> %
                           </span>
                         </div>
                         <div>
-                          <span class="me-3 mb-3 d-inline-block">前面道路幅員・面積加重・特定道路距離</span> <input type="number" class="el__input" value="">
+                          <span class="me-3 mb-3 d-inline-block">前面道路幅員・面積加重・特定道路距離</span> <input type="text" class="el__input" value="">
                         </div>
                       </div>
                     </div><!-- .row -->
@@ -628,16 +643,22 @@
 
                         <ul class="checkbox__list d-sm-flex align-items-center mt-2 mb-4">
                           <li class="mb-3 mb-sm-0">
-                            <input class="" type="checkbox" value="" id="flexCheckDefault1">
-                            <label class="form-check-label" for="flexCheckDefault1">一</label>
+                            <label class="checkbox__fake">一
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                           <li class="mb-3 mb-sm-0">
-                            <input class="" type="checkbox" value="" id="flexCheckDefault2">
-                            <label class="form-check-label" for="flexCheckDefault2">二</label>
+                            <label class="checkbox__fake">二
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                           <li class="mb-3 mb-sm-0">
-                            <input class="" type="checkbox" value="" id="flexCheckDefault3">
-                            <label class="form-check-label" for="flexCheckDefault3">三</label>
+                            <label class="checkbox__fake">三
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                         </ul>
 
@@ -729,15 +750,19 @@
                         <p class="mb-3">■受益者負担金</p>
                         <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault4" checked>
-                            <label class="form-check-label" for="flexCheckDefault4">済み</label>
+                            <label class="checkbox__fake">済み
+                              <input type="checkbox" checked>
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault5">
-                            <label class="form-check-label" for="flexCheckDefault5">未済</label>
+                              <label class="checkbox__fake">未済
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
                           </li>
                         </ul>
-                        <div class="d-sm-flex align-items-center">
+                        <div class="d-flex align-items-center">
                           <span class="me-3 text-nowrap">未払額</span> <input type="text" class="el__input me-3"> 円
                         </div>
 
@@ -780,12 +805,16 @@
                         
                         <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault4">
-                            <label class="form-check-label" for="flexCheckDefault4">該当</label>
+                            <label class="checkbox__fake">該当
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault5" checked>
-                            <label class="form-check-label" for="flexCheckDefault5">非該当</label>
+                            <label class="checkbox__fake">非該当
+                              <input type="checkbox" checked>
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                         </ul>
 
@@ -798,12 +827,16 @@
                         
                         <ul class="checkbox__list d-flex align-items-center mt-2 mb-4">
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault4">
-                            <label class="form-check-label" for="flexCheckDefault4">該当</label>
+                            <label class="checkbox__fake">該当
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                           <li>
-                            <input type="checkbox" value="" id="flexCheckDefault5" checked>
-                            <label class="form-check-label" for="flexCheckDefault5">非該当</label>
+                            <label class="checkbox__fake">非該当
+                              <input type="checkbox" checked>
+                              <span class="checkmark"></span>
+                            </label>
                           </li>
                         </ul>
                         <div class="">
@@ -1099,7 +1132,7 @@
 
                     <hr>
                     <div class="row">
-                      <div class="col-lg-20"><div class="el__label">近景写真登録</div></div>
+                      <div class="col-lg-20"><div class="el__label">住宅地図登録</div></div>
                       <div class="col-lg-80">
                         <button class="btn -s2 me-4 mb-4"><i class="icon-camera"></i> 画像アップロード</button>
 
@@ -1144,7 +1177,7 @@
           <button type="button" class="btn-close d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map"></span> 法第14条地図で特定</h4>
+              <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map pe-3"></span>法第14条地図で特定</h4>
             </div>
             <div class="modal-body">
               <div class="row gx-5">
@@ -1153,7 +1186,7 @@
 
                   <div class="modal__picture" style="background-image:url(images/modal-media-thumb.jpg);">
                     <div class="modal__picture__content">
-                      <p class="mb-4">ここにファイルをドラッグ＆ドロップ</p>
+                      <p class="mb-4"><strong>ここにファイルをドラッグ＆ドロップ</strong></p>
                       <p class="mb-4">または</p>
                       <button type="button" class="btn -s2"><i class="icon-data-capture"></i> ファイルを選択</button>
                     </div>
@@ -1165,43 +1198,45 @@
                   <div class="table__fake mb-4 -modal">
                     <div class="table__fake__header">
                       <div class="row gx-0">
-                        <div class="col-8 pe-3">
-                          <div class="table__fake__th ps-3">ファイル名</div>
+                        <div class="col-12 col-md-9">
+                          <div class="table__fake__th ps-3 ps-md-5">ファイル名</div>
                         </div>
-                        <div class="col-4">
-                          <div class="table__fake__th">更新日</div>
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__th ps-3">更新日</div>
                         </div>
                       </div>
                     </div>
                     <div class="table__fake__content">
                       <div class="table__fake__tr row gx-0">
-                        <div class="col-8 pe-3">
-                          <div class="table__fake__td">
-                            <span class="text__truncate"><input class="form-check-input" type="checkbox" value=""> ファイル名ダミーですテキストダミー.pdf</span>
+                        <div class="col-12 col-md-9 pe-3">
+                          <div class="table__fake__td d-flex">
+                            <label class="checkbox__fake me-1 me-md-2 mb-0">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                            <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
                           </div>
                         </div>
-                        <div class="col-4">
-                          <div class="table__fake__td d-flex">
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__td">
                             <span>2021.12.13</span>
-                            <div class="ms-auto">
-                              <span class="icon-trash"></span>
-                            </div>
                           </div>
                         </div>
                       </div>
 
                       <div class="table__fake__tr row gx-0">
-                        <div class="col-8 pe-3">
-                          <div class="table__fake__td">
-                            <span class="text__truncate"><input class="form-check-input" type="checkbox" value=""> ファイル名ダミーですテキストダミー.pdf</span>
+                        <div class="col-12 col-md-9 pe-3">
+                          <div class="table__fake__td d-flex">
+                            <label class="checkbox__fake me-1 me-md-2 mb-0">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                            <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
                           </div>
                         </div>
-                        <div class="col-4">
-                          <div class="table__fake__td d-flex">
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__td">
                             <span>2021.12.13</span>
-                            <div class="ms-auto">
-                              <span class="icon-trash"></span>
-                            </div>
                           </div>
                         </div>
                       </div>

@@ -1,19 +1,22 @@
 $(document).ready(function(){
 
-    if( $('#table_userinfo').length > 0 ){
-        $('#table_userinfo').DataTable({
-            "searching": false,
-            "paging": false,
-            "info": false,
-            "order": [0],
-            "columnDefs": [ {
+    if( $('table').is('#table_userinfo')){
+        var table = $('#table_userinfo').DataTable({
+            searching: false,
+            paging: false,
+            info: false,
+            order: [[ 0, "desc" ]],
+            columnDefs: [ {
                 'targets': "no-sort",
                 'orderable': false, /* true or false */
             }],
         });
+        table.columns().iterator( 'column', function (ctx, idx) {
+            $( table.column(idx).header() ).find('div').append('<span class="sort-icon"/>');
+        } );
     }
 
-    if( $('.table_list').length > 0 ){
+    if( $('table').is('.table_list') ){
         var table = $('.table_list').DataTable({
             searching: false,
             paging: false,
