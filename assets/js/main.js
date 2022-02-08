@@ -33,7 +33,9 @@ $(document).ready(function(){
         } );
     }
 
-    
+    $('.box__toggle__header').click(function(){
+        $(this).closest('.box__toggle').toggleClass('active').find('.box__toggle__content').slideToggle()
+    })
 
 });
 
