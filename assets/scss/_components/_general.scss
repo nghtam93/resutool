@@ -1,5 +1,6 @@
 .el__input{
-    padding: 9px 10px;
+    font-size: 12px;
+    padding: 7px 10px;
     border-radius: 7px;
     border: 1px solid #CCCCCC;
     &.-small{
@@ -74,6 +75,7 @@
     &__content{
         padding: 30px;
         h6{
+            font-size: 18px;
             margin-bottom: 0;
         }
     }
@@ -394,6 +396,9 @@ table.dataTable{
     &.-modal{
         min-height: 265px;
         font-size: 12px;
+        .table__fake__header{
+            border-bottom: 1px solid #CCCCCC;
+        }
         .table__fake__header, .table__fake__content {
             padding: 0;
         }
@@ -419,6 +424,9 @@ table.dataTable{
     }
 }
 .modal-s1{
+    .modal-dialog {
+        padding-bottom: 80px;
+    }
     .modal-content {
         border-radius: 8px;
     }
@@ -433,31 +441,35 @@ table.dataTable{
     }
     
     .btn-close {
-        position: absolute;
-        bottom: -70px;
-        left: -80px;
-        background: transparent;
-        min-width: 60px;
-        background: #FFFFFF;
-        z-index: 11111;
-        color: #000;
-        opacity: 1;
-        border-radius: 32px;
-        padding: 0;
-        font-size: 10px;
-        font-weight: 700;
-        height: 32px;
-        &::before{
-            content: "\e900";
-            font-family: icomoon;
-            font-size: 5px;
-            font-weight: 400;
+        
+        &.-fix{
             position: absolute;
-            top: -2px;
-            left: 10px;
-            transform: rotate(180deg);
-            line-height: 32px;
+            bottom: -70px;
+            left: -80px;
+            background: transparent;
+            min-width: 60px;
+            background: #FFFFFF;
+            z-index: 998;
+            color: #000;
+            opacity: 1;
+            border-radius: 32px;
+            padding: 0;
+            font-size: 10px;
+            font-weight: 700;
+            height: 32px;
+            &::before{
+                content: "\e900";
+                font-family: icomoon;
+                font-size: 5px;
+                font-weight: 400;
+                position: absolute;
+                top: -2px;
+                left: 10px;
+                transform: rotate(180deg);
+                line-height: 32px;
+            }
         }
+        
     }
 }
 
@@ -564,16 +576,19 @@ table.dataTable{
     left: 0;
     width: 100%;
     background: #fff;
-    z-index: 1100;
+    z-index: 998;
     border-radius: 10px;
     overflow: hidden;
-    a{
+    a, button{
         position: relative;
         font-size: 14px;
         font-weight: 700;
         display: block;
+        width: 100%;
         padding: 25px 35px;
         text-align: center;
+        border: 0;
+        background-color: #fff;
     }
     i{
         position: absolute;
@@ -584,7 +599,7 @@ table.dataTable{
         align-items: center;
     }
     .-right{
-        a{
+        a, button{
             background-color: $color_primary;
             color: #fff;
         }
@@ -687,7 +702,7 @@ table.dataTable{
             }
             &--plus, &--remove{
                 min-width: 100px;
-                padding: 10px 20px;
+                padding: 7px 20px;
                 border-radius: 7px;
                 color: #fff;
                 border: 0;
@@ -878,7 +893,7 @@ table.dataTable{
         .icon-trash {
             position: relative;
             top: -2px;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 400;
         }
         

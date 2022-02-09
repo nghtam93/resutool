@@ -1167,11 +1167,10 @@
         </div> <!-- .sc__content -->
       </div>
 
-
       <!-- Modal -->
       <div class="modal fade modal-s1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-          <button type="button" class="btn-close d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map pe-3"></span>法第14条地図で特定</h4>
@@ -1248,8 +1247,19 @@
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="mb__bukkenfix -modal d-lg-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class=""><i class="icon-data-capture"></i> 公図アップロード</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
 
       <ul class="block__bukkenfix d-none d-md-block">
         <li>
