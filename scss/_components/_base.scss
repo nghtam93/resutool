@@ -71,9 +71,13 @@ label{
 }
 
 .icon-dots{
-    background:url(../img/3dots.svg) no-repeat;
-    background-size: contain;
-    background-position: center;
+    display: inline-block;
+    width: 23px;
+    height: 6px;
+    -webkit-mask-image: url(../img/3dots.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    background-color: #666666;
     &:before{
         display: none;
     }

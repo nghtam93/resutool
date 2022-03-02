@@ -191,13 +191,38 @@
             }
         }
         .table{
-            
             margin-bottom: 0;
             color: #666666;
             > :not(caption) > * > *{
                 padding: 14px 10px;
                 font-weight: 400;
                 color: #666666;
+            }
+            .table__actiion{
+                opacity: 0;
+                transition: all .2s;
+                .dropdown-toggle{
+                    display: inline-block;
+                    width: 28px;
+                    height: 28px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    text-align: center;
+                    box-shadow: 0 0 6px rgba(0, 0, 0, .16);
+                    i{
+                        width: 13px;
+                    }
+                    &::after {
+                      display: none;
+                    }
+                }
+                .dropdown-menu {
+                    font-size: 14px;
+                    min-width: 110px;
+                }
+                .dropdown-item {
+                    padding: 0.25rem 22px;
+                }
             }
 
             .sorting:before, .sorting:after{
@@ -225,7 +250,23 @@
                     padding-left: 30px;
                 }
                 &:last-child{
-                    padding-right: 100px;
+                    // padding-right: 100px;
+                }
+            }
+            tbody{
+
+                tr:hover{
+                    background: #FFF9EF;
+                    --bs-table-bg : #FFF9EF;
+                    --bs-table-accent-bg : #FFF9EF;
+                    .table__actiion{
+                        opacity: 1;
+                    }
+                }
+                tr.row-acitve{
+                    background: #FFF0D8;
+                    --bs-table-bg : #FFF0D8;
+                    --bs-table-accent-bg : #FFF0D8;
                 }
             }
         }
@@ -638,6 +679,13 @@ table.dataTable{
 
         }
     }
+    &.-table-edit{
+        bottom: -100px;
+        transition: all .3s;
+        &.active{
+            bottom: 0;
+        }
+    }
     .ic-plus-circle-white{
 
         left: auto;
@@ -969,20 +1017,21 @@ select{
         }
     }
     .checkbox__fake {
-        height: 26px;
+        height: 14px;
         display: flex;
         align-items: center;
-        padding-left:40px;
+        padding-left: 15px;
+        margin-bottom: 0;
         .checkmark::after {
-            left: 10px;
-            top: 4px;
-            width: 6px;
-            height: 12px;
-          }
+            left: 4px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
+        }
     }
     .checkmark {
-        height: 26px;
-        width: 26px;
+        height: 14px;
+        width: 14px;
       }
 
     .table__fake{

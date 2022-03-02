@@ -66,9 +66,13 @@ label {
   cursor: pointer; }
 
 .icon-dots {
-  background: url(../img/3dots.svg) no-repeat;
-  background-size: contain;
-  background-position: center; }
+  display: inline-block;
+  width: 23px;
+  height: 6px;
+  -webkit-mask-image: url(../img/3dots.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  background-color: #666666; }
   .icon-dots:before {
     display: none; }
 
@@ -643,7 +647,7 @@ label {
   bottom: 0;
   width: 100%;
   background: #fff;
-  z-index: 998; }
+  z-index: 997; }
   .nav__mobile--ul {
     display: flex;
     justify-content: space-around;
@@ -667,13 +671,17 @@ label {
           height: 24px;
           font-size: 24px;
           margin-bottom: 8px;
-          font-weight: 400; }
+          font-weight: 400;
+          text-align: center;
+          margin: 0 auto 8px; }
           .nav__mobile--ul li a i.icon-dots {
             font-size: 6px; }
         .nav__mobile--ul li a:hover {
           color: #fc8800; }
       .nav__mobile--ul li.active > a, .nav__mobile--ul li.current-menu-item > a, .nav__mobile--ul li.current_page_item > a, .nav__mobile--ul li:hover > a {
         color: #fc8800; }
+      .nav__mobile--ul li.active .icon-dots, .nav__mobile--ul li.current-menu-item .icon-dots, .nav__mobile--ul li.current_page_item .icon-dots, .nav__mobile--ul li:hover .icon-dots {
+        background-color: #fc8800; }
   @media (min-width: 1199px) {
     .nav__mobile {
       display: none; } }
@@ -822,6 +830,26 @@ label {
         padding: 14px 10px;
         font-weight: 400;
         color: #666666; }
+      .sc__box.-list .table .table__actiion {
+        opacity: 0;
+        transition: all .2s; }
+        .sc__box.-list .table .table__actiion .dropdown-toggle {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          background-color: #fff;
+          border-radius: 50%;
+          text-align: center;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.16); }
+          .sc__box.-list .table .table__actiion .dropdown-toggle i {
+            width: 13px; }
+          .sc__box.-list .table .table__actiion .dropdown-toggle::after {
+            display: none; }
+        .sc__box.-list .table .table__actiion .dropdown-menu {
+          font-size: 14px;
+          min-width: 110px; }
+        .sc__box.-list .table .table__actiion .dropdown-item {
+          padding: 0.25rem 22px; }
       .sc__box.-list .table .sorting:before, .sc__box.-list .table .sorting:after {
         display: none; }
       .sc__box.-list .table th {
@@ -838,8 +866,16 @@ label {
           padding-left: 30px; }
       .sc__box.-list .table td:first-child {
         padding-left: 30px; }
-      .sc__box.-list .table td:last-child {
-        padding-right: 100px; }
+      .sc__box.-list .table tbody tr:hover {
+        background: #FFF9EF;
+        --bs-table-bg: #FFF9EF;
+        --bs-table-accent-bg: #FFF9EF; }
+        .sc__box.-list .table tbody tr:hover .table__actiion {
+          opacity: 1; }
+      .sc__box.-list .table tbody tr.row-acitve {
+        background: #FFF0D8;
+        --bs-table-bg: #FFF0D8;
+        --bs-table-accent-bg: #FFF0D8; }
 
 table.dataTable thead th {
   background: transparent !important;
@@ -1117,6 +1153,11 @@ table.dataTable thead .sorting_asc_disabled span:before, table.dataTable thead .
     color: #fff; }
     .mb__bukkenfix.-modal .-right a.active, .mb__bukkenfix.-modal .-right button.active {
       background: #fc8800; }
+  .mb__bukkenfix.-table-edit {
+    bottom: -100px;
+    transition: all .3s; }
+    .mb__bukkenfix.-table-edit.active {
+      bottom: 0; }
   .mb__bukkenfix .ic-plus-circle-white {
     left: auto;
     right: 25px;
@@ -1329,19 +1370,20 @@ select {
       font-size: 12px; }
 
   .checkbox__fake {
-    height: 26px;
+    height: 14px;
     display: flex;
     align-items: center;
-    padding-left: 40px; }
+    padding-left: 15px;
+    margin-bottom: 0; }
     .checkbox__fake .checkmark::after {
-      left: 10px;
-      top: 4px;
-      width: 6px;
-      height: 12px; }
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px; }
 
   .checkmark {
-    height: 26px;
-    width: 26px; }
+    height: 14px;
+    width: 14px; }
 
   .table__fake.-modal {
     min-height: 245px; }

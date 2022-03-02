@@ -74,7 +74,7 @@
     bottom: 0;
     width: 100%;
     background:#fff;
-    z-index: 998;
+    z-index: 997;
     &--ul{
         display: flex;
         justify-content: space-around;
@@ -99,6 +99,8 @@
                     font-size: 24px;
                     margin-bottom: 8px;
                     font-weight: 400;
+                    text-align: center;
+                    margin: 0 auto 8px;
                     &.icon-dots {
                         font-size: 6px;
                     }
@@ -110,6 +112,9 @@
             &.active, &.current-menu-item, &.current_page_item, &:hover{
                 &>a{
                     color: $color_primary;
+                }
+                .icon-dots{
+                    background-color: $color_primary;
                 }
             }
         }
