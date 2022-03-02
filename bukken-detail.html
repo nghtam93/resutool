@@ -1,0 +1,979 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/libs/DataTables/jquery.dataTables.min.css"> -->
+
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+    <div class="wrapper">
+
+      <div class="header__mb">
+        <div class="header__mb__logout"><a href=""><i class="icon-logout"></i>ログアウト</a></div>
+        <div class="header__mb__logo"><a href=""><img src="images/logo-mb.svg" alt=""></a></div>
+        <div class="header__mb__avatar"><a href=""><img src="images/avatar.png" alt=""></a></div>
+      </div>
+
+      <div class="d-flex">
+
+        <div class="menuLeft">
+          <div class="menuLeft__header">
+            <div class="menuLeft__avatar dnfix__thumb">
+              <a href="">
+                <img src="images/avatar.png" alt="">
+              </a>
+            </div>
+            <p class="menuLeft__username">会員ID●●●●●</p>
+          </div>
+          <div class="menuLeft__content">
+            <div class="main__nav">
+              <ul class="el__menu">
+                <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+                <li class="active"><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+                <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+                <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+                <li><a href=""><i class="icon-logout"></i>ログアウト</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="menuLeft__footer text-center">
+            <a href="" class="menuLeft__logo">
+              <img src="images/logo.svg" alt="">
+            </a>
+            <div class="login__nav">
+              <ul class="justify-content-center">
+                <li><a href="">プライバシー</a></li>
+                <li><a href="">利用規約</a></li>
+                <li><a href="">問合せ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc__content">
+
+          <div class="sc__box mb-4">
+            <div class="sc__box__header -small d-flex align-items-center">
+              <h4 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal"></i>新規物件登録</h4>
+            </div>
+            <div class="accordion -detail" id="accordionBukken">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    基本情報
+                  </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1">
+                  <div class="accordion-body">
+                    
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">管理番号</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">0000013</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">業務区分</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">地価公示</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">対象区分</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">対象地</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">年度</div></div>
+                      <div class="col-sm-80 d-sm-flex align-items-center">
+                        <p class="el__value">R3年度</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">公募資料</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="table__fake mb-4">
+                            <div class="table__fake__header">
+                              <div class="row gx-0">
+                                <div class="col-6 col-sm-8 pe-3">
+                                  <div class="table__fake__th">ファイル名</div>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                  <div class="table__fake__th">更新日</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="table__fake__content">
+                              <div class="table__fake__tr row gx-0">
+                                <div class="col-6 col-sm-8 pe-3">
+                                  <div class="table__fake__td">
+                                    <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                                  </div>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                  <div class="table__fake__td d-flex">
+                                    <span>2021.12.13</span>
+                                    <div class="ms-auto">
+                                      <span class="icon-trash"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="table__fake__tr row gx-0">
+                                <div class="col-6 col-sm-8 pe-3">
+                                  <div class="table__fake__td">
+                                    <span class="text__truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                                  </div>
+                                </div>
+                                <div class="col-6 col-sm-4">
+                                  <div class="table__fake__td d-flex">
+                                    <span>2021.12.13</span>
+                                    <div class="ms-auto">
+                                      <span class="icon-trash"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          
+                            </div>
+                        </div> <!-- .table__fake -->
+
+                        <button class="btn -s2"><i class="icon-data-capture"></i> 公募資料アップロード</button>
+                      </div>
+                    </div><!-- .row -->
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                    対象地
+                  </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse show" aria-labelledby="heading2">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">地番</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">100</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">都道府県／市区町村 CD</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">1234</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">所在地</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value mb-0">高知県福井市</p>
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                    測定・計測
+                  </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse show" aria-labelledby="heading3">
+                  <div class="accordion-body">
+                    <div class="row pt-3">
+                      <div class="col-sm-20"><div class="el__label">地積</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">100.0㎡</p>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-sm-3">
+                      <div class="col-sm-20 d-none d-sm-block"><div class="el__label">間口／奥行き</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-sm-flex">
+                          <p class="w120px el__label">間口</p>
+                          <p class="flex-grow-1 el__value">15.30㎡</p>
+                        </div>
+                        <hr class="d-none d-sm-block">
+                        <div class="d-sm-flex">
+                          <p class="w120px el__label">奥行き</p>
+                          <p class="flex-grow-1 el__value">18.50㎡</p>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-sm-3">
+                      <div class="col-sm-20 d-none d-sm-block"><div class="el__label">標高測定</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-sm-flex">
+                          <p class="w120px el__label">標高</p>
+                          <p class="flex-grow-1 el__value">2.30㎡</p>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-sm-3">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">形状判定・陰地割合測定</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex">
+                          <p class="w120px">整形地面積</p>
+                          <p class="flex-grow-1 ms-auto ms-sm-0 text-end text-sm-start">120.0㎡</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">陰地割合</p>
+                          <p class="flex-grow-1 ms-auto ms-sm-0 text-end text-sm-start">83%</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">形状判定</p>
+                          <p class="flex-grow-1 ms-auto ms-sm-0 text-end text-sm-start">不整形</p>
+                        </div>
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-4 pt-sm-3">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">街路条件判定／幅員測定</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="d-flex">
+                          <p class="w120px">接面状況区分</p>
+                          <p class="flex-grow-1 ms-auto ms-sm-0 text-end text-sm-start">二方路</p>
+                        </div>
+                        <hr>
+
+                        <div class="d-sm-flex">
+                          <p class="w120px d-none d-sm-block">接面道路区分①</p>
+                          <div class="flex-grow-1">
+                              <div class="box__toggle  mb-4">
+                                <div class="box__toggle__header d-flex">
+                                  <div class="pt-0"><span class="d-sm-none">接面道路区分①</span><span class="d-none d-sm-block">前面道路</span></div>
+                                  <div class="pt-0 ms-auto"><span class="d-sm-none">前面道路</span> <i class="icon-arrow-up d-inline-block"></i></div>
+                                </div>
+                                <ul class="box__toggle__content">
+                                  <li class="d-flex">
+                                    <div>方位</div>
+                                    <div class="ms-auto text-end">南</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>種類</div>
+                                    <div class="ms-auto text-end">国道</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>名称</div>
+                                    <div class="ms-auto text-end">—</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>建築基準法上の区分</div>
+                                    <div class="ms-auto text-end">第42条1項1号</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>道路幅員</div>
+                                    <div class="ms-auto text-end">36.0㎡</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>セットバック</div>
+                                    <div class="ms-auto text-end">不要</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>歩道</div>
+                                    <div class="ms-auto text-end">有</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>舗装の種類</div>
+                                    <div class="ms-auto text-end">アスファルト</div>
+                                  </li>
+                                  <li class="d-flex">
+                                    <div>舗装の状態</div>
+                                    <div class="ms-auto text-end">優</div>
+                                  </li>
+                                </ul>
+                              </div> <!-- .box__toggle -->
+
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="d-sm-flex">
+                          <p class="w120px d-none d-sm-block">接面道路区分②</p>
+                          <div class="flex-grow-1">
+                            <div class="box__toggle active mb-4">
+                              <div class="box__toggle__header d-flex">
+                                <div class="pt-0"><span class="d-sm-none">接面道路区分②</span><span class="d-none d-sm-block">背面道路</span></div>
+                                <div class="pt-0 ms-auto"><span class="d-sm-none">背面道路</span> <i class="icon-arrow-up d-inline-block"></i></div>
+                              </div>
+                              <ul class="box__toggle__content" style="display: none;">
+                                <li class="d-flex">
+                                  <div>方位</div>
+                                  <div class="ms-auto text-end">北</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>種類</div>
+                                  <div class="ms-auto text-end">市道</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>名称</div>
+                                  <div class="ms-auto text-end">上町14号線</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>建築基準法上の区分</div>
+                                  <div class="ms-auto text-end">道路にあらず</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>道路幅員</div>
+                                  <div class="ms-auto text-end">4,50㎡</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>セットバック</div>
+                                  <div class="ms-auto text-end">不要</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>歩道</div>
+                                  <div class="ms-auto text-end">無</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>舗装の種類</div>
+                                  <div class="ms-auto text-end">アスファルト</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>舗装の状態</div>
+                                  <div class="ms-auto text-end">普通</div>
+                                </li>
+                              </ul>
+
+                            </div> <!-- .box__toggle -->
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-3">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">接近性測定</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="d-sm-flex">
+                          <p class="w120px d-none d-sm-block">交通／接近条件①</p>
+                          <div class="flex-grow-1">
+                            <div class="box__toggle mb-4">
+                              <div class="box__toggle__header d-flex">
+                                <div class="pt-0"><span class="d-sm-none">交通／接近条件①</span><span class="d-none d-sm-block">駅</span></div>
+                                <div class="pt-0 ms-auto"><span class="d-sm-none">駅</span> <i class="icon-arrow-up d-inline-block"></i></div>
+                              </div>
+                              <ul class="box__toggle__content">
+                                <li class="d-flex">
+                                  <div>路線名</div>
+                                  <div class="ms-auto text-end">JR土讃線</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>最寄駅</div>
+                                  <div class="ms-auto text-end">旭駅</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>直線距離</div>
+                                  <div class="ms-auto text-end">772m</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>交通手段</div>
+                                  <div class="ms-auto text-end">自動車（最短距離探索）</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>道のり距離</div>
+                                  <div class="ms-auto text-end">1.0km</div>
+                                </li>
+                                <li class="d-flex">
+                                  <div>所要時間</div>
+                                  <div class="ms-auto text-end">3分</div>
+                                </li>
+                              </ul>
+                            </div> <!-- .box__toggle -->
+
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="d-sm-flex">
+                          <p class="w120px d-none d-sm-block">交通／接近条件②</p>
+                          <div class="flex-grow-1">
+                            <div class="box__toggle active mb-4">
+                              <div class="box__toggle__header d-flex">
+                                <div class="pt-0"><span class="d-sm-none">交通／接近条件②</span><span class="d-none d-sm-block">バス停</span></div>
+                                <div class="pt-0 ms-auto"><span class="d-sm-none">バス停</span> <i class="icon-arrow-up d-inline-block"></i></div>
+                              </div>
+                              <ul class="box__toggle__content" style="display:none">
+                                <li class="d-flex">
+                                  <td>路線名</td>
+                                  <td class="ms-auto text-end">高岡線</td>
+                                </li>
+                                <li class="d-flex">
+                                  <td>最寄駅</td>
+                                  <t class="ms-auto text-end"d>上町五丁目</td>
+                                </li>
+                                <li class="d-flex">
+                                  <td>直線距離</td>
+                                  <td class="ms-auto text-end">95m</td>
+                                </li>
+                                <li class="d-flex">
+                                  <td>交通手段</td>
+                                  <t class="ms-auto text-end"d>徒歩</td>
+                                </li>
+                                <li class="d-flex">
+                                  <td>道のり距離</td>
+                                  <td class="ms-auto text-end">94m</td>
+                                </li>
+                                <li class="d-flex">
+                                  <td>所要時間</td>
+                                  <t class="ms-auto text-end"d>1分</td>
+                                </li>
+                              </ul>
+                            </div> <!-- .box__toggle -->
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-3">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">近隣地域判定</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex">
+                          <p class="w120px">北</p>
+                          <p class="flex-grow-1 text-end text-sm-start">22.00m</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">南</p>
+                          <p class="flex-grow-1 text-end text-sm-start">18.00m</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">西</p>
+                          <p class="flex-grow-1 text-end text-sm-start">22.00m</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">東</p>
+                          <p class="flex-grow-1 text-end text-sm-start">40.00m</p>
+                        </div>
+                        <hr class="d-none d-sm-block">
+                      </div>
+                    </div> <!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row pt-3">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">標準的画地判定</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex">
+                          <p class="w120px">間口</p>
+                          <p class="flex-grow-1 text-end text-sm-start">15.30㎡</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">奥行き</p>
+                          <p class="flex-grow-1 text-end text-sm-start">20.00㎡</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">面積</p>
+                          <p class="flex-grow-1 text-end text-sm-start">300.00㎡</p>
+                        </div>
+
+                      </div>
+                    </div> <!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                    行政的条件
+                  </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">都市計画区域</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">都市計画区域内（市街化区域）</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">用途地域</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">商業</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">建ぺい率</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex">
+                          <p class="w120px">指定</p>
+                          <p class="flex-grow-1 text-end text-sm-start">80%</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">基準</p>
+                          <p class="flex-grow-1 text-end text-sm-start">80%</p>
+                        </div>
+                        <hr>
+                        <div class="d-sm-flex">
+                          <p class="w280px el__label">防火地域で耐火建築・角地等・面積加重</p>
+                          <p class="flex-grow-1 el__value">-</p>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">容積率</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex">
+                          <p class="w120px">指定</p>
+                          <p class="flex-grow-1 text-end text-sm-start">400%</p>
+                        </div>
+                        <hr>
+                         <div class="d-flex">
+                          <p class="w120px">基準</p>
+                          <p class="flex-grow-1 text-end text-sm-start">400%</p>
+                        </div>
+                        <hr>
+                         <div class="d-sm-flex">
+                          <p class="w280px el__label">前面道路幅員・面積加重・特定道路距離</p>
+                          <p class="flex-grow-1 el__value">-</p>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">防火規制</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">ない</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label mt-2">日影規制</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">—</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">その他</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">ない</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">土砂災害</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">ない</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">周知の埋蔵文化財包蔵地</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">ない</p>
+                        <hr class="d-none d-sm-block">
+                        <div class="d-flex">
+                          <p class="w120px">名称</p>
+                          <p class="flex-grow-1 text-end text-sm-start">—</p>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                    供給施設
+                  </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse show" aria-labelledby="heading5">
+                  <div class="accordion-body">
+                    
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">水道</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">引込済（上水道）</p>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row mb-4">
+                      <div class="col-sm-20"><div class="el__label">公共下水道</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value">接続済み</p>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">受益者負担金</p>
+                          <p class="flex-grow-1 text-end text-sm-start">済み</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex">
+                          <p class="w120px">未払額</p>
+                          <p class="flex-grow-1 text-end text-sm-start">— 円</p>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">都市ガス</div></div>
+                      <div class="col-sm-80">
+                        <p class="el__value mb-0">引込済</p>
+                      </div>
+                    </div><!-- .row -->
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                    その他
+                  </button>
+                </h2>
+                <div id="collapse6" class="accordion-collapse collapse show" aria-labelledby="heading6">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">土壌汚染</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-flex mb-3 mb-sm-0">
+                          <p class="w120px">業種</p>
+                          <p class="flex-grow-1 text-end text-sm-start">ー</p>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr class="d-none d-sm-block">
+                    <div class="row">
+                      <div class="col-sm-20 mb-3 mb-sm-0"><div class="el__label">特定施設届出</div></div>
+                      <div class="col-sm-80">
+                        <div class="d-sm-flex">
+                          <p class="w280px el__label">■水質汚濁防止法・下水道法の特定施設</p>
+                          <p class="flex-grow-1 el__value">非該当</p>
+                        </div>
+                        <hr>
+                        <div class="d-flex mb-3 mb-sm-0">
+                          <p class="w120px">物質名</p>
+                          <p class="flex-grow-1 text-end text-sm-start">ー</p>
+                        </div>
+                        <hr class="d-none d-sm-block">
+                        <div class="d-sm-flex">
+                          <p class="w280px el__label">■有害物質使用特定施設</p>
+                          <p class="flex-grow-1 el__value">非該当</p>
+                        </div>
+                        <hr class="d-none d-sm-block">
+                        <div class="d-flex">
+                          <p class="w120px">物質名</p>
+                          <p class="flex-grow-1 text-end text-sm-start">ー</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                    現況写真
+                  </button>
+                </h2>
+                <div id="collapse7" class="accordion-collapse collapse show" aria-labelledby="heading7">
+                  <div class="accordion-body">
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">遠景写真登録</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">近景写真登録</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                    地歴調査
+                  </button>
+                </h2>
+                <div id="collapse8" class="accordion-collapse collapse show" aria-labelledby="heading8">
+                  <div class="accordion-body">
+                    <div class="row pt-3">
+                      <div class="col-sm-20"><div class="el__label">地歴</div></div>
+                      <div class="col-sm-80">
+                        <div class="clone__wrap__scroll">
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                          <hr>
+                          <p>S11.1.1（1936.1.1）</p>
+                        </div>
+
+
+                        
+                      </div>
+                    </div><!-- .row -->
+
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-20"><div class="el__label">住宅地図登録</div></div>
+                      <div class="col-sm-80">
+
+                        <div class="row gx-3">
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 mb-3">
+                            <div class="media__thumb">
+                              <div class="dnfix__thumb">
+                                <img src="images/media-thumb.jpg" alt="">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- .row -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div> <!-- .sc__content -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade modal-s1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map pe-3"></span>法第14条地図で特定</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row gx-5">
+                <div class="col-md-6 -col-left d-none d-lg-block">
+                  <p class="mb-4">新しく公図をアップロード</p>
+
+                  <div class="modal__picture" style="background-image:url(images/modal-media-thumb.jpg);">
+                    <div class="modal__picture__content">
+                      <p class="mb-4"><strong>ここにファイルをドラッグ＆ドロップ</strong></p>
+                      <p class="mb-4">または</p>
+                      <button type="button" class="btn -s2"><i class="icon-data-capture"></i> ファイルを選択</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 -col-right">
+                  <p class="mb-4">アップロード済みの公図を選択</p>
+
+                  <div class="table__fake mb-4 -modal">
+                    <div class="table__fake__header">
+                      <div class="row gx-0">
+                        <div class="col-12 col-md-9">
+                          <div class="table__fake__th ps-3 ps-md-5">ファイル名</div>
+                        </div>
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__th ps-3">更新日</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="table__fake__content">
+                      <div class="table__fake__tr row gx-0">
+                        <div class="col-12 col-md-9 pe-3">
+                          <div class="table__fake__td d-flex">
+                            <label class="checkbox__fake me-1 me-md-2 mb-0">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                            <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__td">
+                            <span>2021.12.13</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="table__fake__tr row gx-0">
+                        <div class="col-12 col-md-9 pe-3">
+                          <div class="table__fake__td d-flex">
+                            <label class="checkbox__fake me-1 me-md-2 mb-0">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                            <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-3 d-none d-md-block">
+                          <div class="table__fake__td">
+                            <span>2021.12.13</span>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div> <!-- .table__fake -->
+                  <div class="text-center">
+                    <button type="button" class="btn -s2 -modal">次へ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-lg-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class=""><i class="icon-data-capture"></i> 公図アップロード</button>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <ul class="block__bukkenfix d-none d-md-block">
+        <li>
+          <a href="">
+            <i class="icon-plus"></i>
+            <p>保存</p>
+          </a>
+        </li>
+      </ul>
+
+      <div class="mb__bukkenfix d-md-none">
+        <ul class="row gx-0">
+          <li class="col-6">
+            <a href=""><i class="icon-angle-right rotate-180"></i> 戻る</a>
+          </li>
+          <li class="col-6 -right">
+            <a href=""><i class="icon-plus"></i> 保存</a>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/jquery.dataTables.min.js"></script> -->
+    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/dataTables.bootstrap5.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
