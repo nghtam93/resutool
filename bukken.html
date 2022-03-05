@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/favicon.png" />
     <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="assets/libs/DataTables/jquery.dataTables.min.css"> -->
 
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -96,14 +95,14 @@
                           <span class="checkmark"></span>
                         </label>
                       </th>
-                      <th><div class="d-flex align-items-center">管理番号</div></th>
-                      <th><div class="d-flex align-items-center">業務区分</div></th>
-                      <th><div class="d-flex align-items-center">対象区分</div></th>
-                      <th><div class="d-flex align-items-center">年度</div></th>
-                      <th><div class="d-flex align-items-center">都道府県／<br>市区町村CD</div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">管理番号<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">業務区分<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">対象区分<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">年度<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">都道府県／<br>市区町村CD<span class="sort-icon"></span></div></th>
                       <th class="no-sort"></th>
-                      <th><div class="d-flex align-items-center">地番</div></th>
-                      <th><div class="d-flex align-items-center">地積</div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">地番<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">地積<span class="sort-icon"></span></div></th>
                       <th class="d-none d-sm-table-cell"></th>
                     </tr>
                   </thead>
@@ -486,8 +485,6 @@
 
     </div> <!-- .wrapper -->
     <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/jquery.dataTables.min.js"></script> -->
-    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/dataTables.bootstrap5.min.js"></script> -->
     <script src="js/main.js"></script>
   </body>
 </html>

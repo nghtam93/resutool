@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="images/favicon.png" />
     <script src="js/jquery-3.6.0.min.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="assets/libs/DataTables/jquery.dataTables.min.css"> -->
 
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -186,8 +185,8 @@
                     <div class="row pt-3">
                       <div class="col-lg-20"><div class="el__label">対象地特定</div></div>
                       <div class="col-lg-80">
-                        <button type="button"  class="btn -s2 me-4 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
-                        <button class="btn -s2 mb-3"><i class="icon-map-marker"></i> 住所で特定</button>
+                        <button type="button"  class="btn -s2 me-4 mb-3" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu0_Modal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button class="btn -s2 mb-3" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address_Modal"><i class="icon-map-marker"></i> 住所で特定</button>
                       </div>
                     </div><!-- .row -->
                     <hr>
@@ -225,8 +224,8 @@
                     <div class="row pt-3">
                       <div class="col-lg-20"><div class="el__label">地積</div></div>
                       <div class="col-lg-80">
-                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
-                        <button class="btn -s2 mb-4"><i class="icon-map-marker"></i> 住所で特定</button>
+                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu0_Modal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button class="btn -s2 mb-4" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address_Modal"><i class="icon-map-marker"></i> 住所で特定</button>
                         <div class="row pt-3 pb-3">
                           <div class="col-md-6">
                             <div class="m2__line d-flex">
@@ -241,7 +240,7 @@
                     <div class="row pt-3">
                       <div class="col-lg-20"><div class="el__label">間口／奥行き</div></div>
                       <div class="col-lg-80">
-                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="icon-map"></i> 法第14条地図で特定</button>
+                        <button type="button" class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu0_Modal"><i class="icon-map"></i> 法第14条地図で特定</button>
                         <button class="btn -s2 me-4 mb-4"><i class="icon-picture"></i> 航空写真で概測</button>
                         <button class="btn -s2 mb-4"><i class="icon-map-marker2"></i> その他図面で計測</button>
                         <div class="row pt-3">
@@ -306,7 +305,7 @@
                     <div class="row pt-3">
                       <div class="col-lg-20"><div class="el__label">街路条件判定／幅員測定</div></div>
                       <div class="col-lg-80">
-                        <button class="btn -s2 me-4 mb-4"><i class="icon-road"></i> 判定／測定する</button>
+                        <button class="btn -s2 me-4 mb-4" data-bs-toggle="modal" data-bs-target="#RoadHantei_Modal"><i class="icon-road"></i> 判定／測定する</button>
                         <div class="row pt-3 pb-3">
                           <div class="col-md-12 mb-4">
                             <div class="m2__line d-flex">
@@ -1167,13 +1166,15 @@
         </div> <!-- .sc__content -->
       </div>
 
+
+      <!-- Start TaishouTokutei_Kouzu_Modal -->
       <!-- Modal -->
-      <div class="modal fade modal-s1" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade modal-s1" id="TaishouTokutei_Kouzu0_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Kouzu0_ModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel"><span class="icon-map pe-3"></span>法第14条地図で特定</h4>
+              <h4 class="modal-title" id="TaishouTokutei_Kouzu0_ModalLabel"><span class="icon-map pe-3"></span>法第14条地図で特定</h4>
             </div>
             <div class="modal-body">
               <div class="row gx-5">
@@ -1194,17 +1195,17 @@
                   <div class="table__fake mb-4 -modal">
                     <div class="table__fake__header">
                       <div class="row gx-0">
-                        <div class="col-12 col-md-9">
+                        <div class="col-12 col-md-8 col-xl-9">
                           <div class="table__fake__th ps-3 ps-md-5">ファイル名</div>
                         </div>
-                        <div class="col-4 col-md-3 d-none d-md-block">
+                        <div class="col-4 col-md-4 col-xl-3 d-none d-md-block">
                           <div class="table__fake__th ps-3">更新日</div>
                         </div>
                       </div>
                     </div>
                     <div class="table__fake__content">
                       <div class="table__fake__tr row gx-0">
-                        <div class="col-12 col-md-9 pe-3">
+                        <div class="col-12 col-md-8 col-xl-9 pe-xl-3">
                           <div class="table__fake__td d-flex">
                             <label class="checkbox__fake me-1 me-md-2 mb-0">
                               <input type="checkbox">
@@ -1213,7 +1214,7 @@
                             <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
                           </div>
                         </div>
-                        <div class="col-4 col-md-3 d-none d-md-block">
+                        <div class="col-4 col-md-4 d-none d-md-block pe-3">
                           <div class="table__fake__td">
                             <span>2021.12.13</span>
                           </div>
@@ -1221,7 +1222,7 @@
                       </div>
 
                       <div class="table__fake__tr row gx-0">
-                        <div class="col-12 col-md-9 pe-3">
+                        <div class="col-12 col-md-8 col-xl-9 pe-xl-3">
                           <div class="table__fake__td d-flex">
                             <label class="checkbox__fake me-1 me-md-2 mb-0">
                               <input type="checkbox">
@@ -1230,7 +1231,7 @@
                             <span class="text-truncate">ファイル名ダミーですテキストダミー.pdf</span>
                           </div>
                         </div>
-                        <div class="col-4 col-md-3 d-none d-md-block">
+                        <div class="col-4 col-md-4 col-xl-3 d-none d-md-block pe-3">
                           <div class="table__fake__td">
                             <span>2021.12.13</span>
                           </div>
@@ -1240,7 +1241,7 @@
                     </div>
                   </div> <!-- .table__fake -->
                   <div class="text-center">
-                    <button type="button" class="btn -s2 -modal">次へ</button>
+                    <button type="button" class="btn -s2 -modal" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu_Modal">次へ</button>
                   </div>
                 </div>
               </div>
@@ -1254,12 +1255,789 @@
               <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
             </li>
             <li class="col-6 -right">
-              <button type="button" class=""><i class="icon-data-capture"></i> 公図アップロード</button>
+              <button type="button" class="active"><i class="icon-data-capture"></i> 公図アップロード</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 1 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Kouzu_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Kouzu_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Kouzu_ModalLabel"><i class="icon-map pe-3"></i>法第14条地図で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first current"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="disabled"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu2_Modal"><span class="number">2</span> 座標の特定</a></li>
+                  <li class="disabled"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu3_Modal"><span class="number">3</span> 登記簿と照合</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu4_Modal"><span class="number">4</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+                  <div class="b__map__search">
+                    <div class="-input">対象地の中心に「＋」カーソルを合わせてクリックしてください </div>
+                  </div>
+
+                  <div class="b__map__box">
+                    <ul>
+                      <li>地番</li>
+                      <li>1541-1</li>
+                      <li>都道府県／市区町村 CD</li>
+                      <li>00000</li>
+                      <li>所在地</li>
+                      <li>●●●県●●市●●</li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">特定する</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="">特定する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 2 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Kouzu2_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Kouzu2_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Kouzu2_ModalLabel"><i class="icon-map pe-3"></i>法第14条地図で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="current"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu2_Modal"><span class="number">2</span> 座標の特定</a></li>
+                  <li class="disabled"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu3_Modal"><span class="number">3</span> 登記簿と照合</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu4_Modal"><span class="number">4</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body p-0">
+
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+
+                  <div class="b__map__addpoint">
+                    <button class="-btn-addpoint mb-sm-3"><i></i>Add Point</button>
+                    <div>
+                      <p>Perimeter</p>
+                      <p><strong>54.35㎡</strong></p>
+                      <hr class="my-2">
+                      <p>Area</p>
+                      <p><strong>200.00㎡</strong></p>
+                    </div>
+                  </div>
+
+                  <div class="b__map__box">
+                    <ul>
+                      <li>面積（登記簿）</li>
+                      <li class="d-flex align-items-center"><input type="text" value="200.00" class="form-control me-3">㎡</li>
+                      <li>航空写真概測</li>
+                      <li class="d-flex">200.05㎡ <a href="" class="ms-auto"><u>やり直す</u></a></li>
+                      <li>採用する面積</li>
+                      <li>
+                        <select name="" id="" class="form-control">
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">確認する</a>
+                    </div>
+                  </div>
+
+                  <div class="b__map__maker"></div>
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="">特定する <i class="ic-plus-circle-white -plus"></i></button>
             </li>
           </ul>
         </div>
 
       </div>
+      <!-- Modal Step 3 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Kouzu3_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Kouzu3_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Kouzu3_ModalLabel"><i class="icon-map pe-3"></i>法第14条地図で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu2_Modal"><span class="number">2</span> 座標の特定</a></li>
+                  <li class="current"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu3_Modal"><span class="number">3</span> 登記簿と照合</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu4_Modal"><span class="number">4</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body p-0">
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+
+                  <div class="b__map__addpoint">
+
+                    <button class="-btn-addpoint mb-sm-3"><i></i>Add Point</button>
+
+                    <div>
+                      <p>Perimeter</p>
+                      <p><strong>54.35㎡</strong></p>
+                      <hr class="my-2">
+                      <p>Area</p>
+                      <p><strong>200.00㎡</strong></p>
+                    </div>
+
+                  </div>
+
+                  <div class="b__map__box">
+                    <ul>
+                      <li>面積（登記簿）</li>
+                      <li>200.00㎡</li>
+                      <li>航空写真概測</li>
+                      <li class="d-flex">200.05㎡ <a href="" class="ms-auto"><u>やり直す</u></a></li>
+                      <li>採用する面積</li>
+                      <li>
+                        <select name="" id="" class="form-control">
+                          <option value="">面積（登記簿）</option>
+                          <option value="">面積（登記簿）</option>
+                          <option value="">面積（登記簿）</option>
+                          <option value="">面積（登記簿）</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">確認する</a>
+                    </div>
+                  </div>
+
+                  <div class="b__map__maker"></div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="">特定する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 4 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Kouzu4_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Kouzu4_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Kouzu4_ModalLabel"><i class="icon-map pe-3"></i>法第14条地図で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu2_Modal"><span class="number">2</span> 座標の特定</a></li>
+                  <li class="done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu3_Modal"><span class="number">3</span> 登記簿と照合</a></li>
+                  <li class="current last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Kouzu4_Modal"><span class="number">4</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+
+              <div class="bmodal__list">
+                <ul class="mb-5 text-center text-sm-start">
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">地番</div>
+                    <div>1541-1</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">都道府県／市区町村 CD</div>
+                    <div>00000</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">所在地</div>
+                    <div>●●●県●●市●●</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">座標系</div>
+                    <div>●●</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">緯度</div>
+                    <div>000.000</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">経度</div>
+                    <div>000.000</div>
+                  </li>
+                  <li class="d-sm-flex">
+                    <div class="-li-w220 bmodal__list__lable">面積</div>
+                    <div>200.00㎡</div>
+                  </li>
+                </ul>
+                <div class="d-none d-md-block text-center">
+                  <a href="" class="btn -brown -small">測定をやり直す</a>
+                  <a href="" class="btn -plus -small ms-3">この内容で保存する</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End TaishouTokutei_Kouzu_Modal -->
+
+      <!-- Start TaishouTokutei_Kouzu_Modal -->
+      <!-- Modal -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Address_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Address_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-flex align-items-center" id="TaishouTokutei_Address_ModalLabel"><i class="ic-maker-map me-3"></i>住所で特定</h4>
+            </div>
+            <div class="modal-body p-0">
+
+              <div class="b__map__iframe d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                  <p class="mb-4">特定したい物件の住所、もしくは近隣の住所を検索しましょう</p>
+
+                  <div class="msearch">
+                    <div class="msearch__field__wrap">
+                      <input type="text" class="msearch__field form-control" placeholder="住所を入力して検索">
+                    </div>
+                    <button type="button" class="msearch__submit d-none d-md-block" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address1_Modal">検索</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <a href="RoadHantei_step2.html" class="active"><i class="ic-search"></i> 検索</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 1 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Address1_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Address1_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Address1_ModalLabel"><i class="ic-maker-map me-3"></i>住所で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first current"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address1_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="disabled"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address2_Modal"><span class="number">2</span> 面積を測定</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address3_Modal"><span class="number">3</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+                  <div class="b__map__search">
+                    <div class="-input">対象地に「＋」カーソルを合わせてクリックしてください </div>
+                  </div>
+                  <div class="b__map__box">
+                    <ul>
+                      <li>所在地</li>
+                      <li>〒780-0965 高知県高知市</li>
+                      <li>緯度</li>
+                      <li>33.567960</li>
+                      <li>経度</li>
+                      <li>133.504472</li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">特定する</a>
+                    </div>
+                  </div>
+                  <div class="b__map__maker"></div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 2 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Address2_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Address2_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Address2_ModalLabel"><i class="ic-maker-map me-3"></i>住所で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address1_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="current"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address2_Modal"><span class="number">2</span> 面積を測定</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address3_Modal"><span class="number">3</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+
+                  <div class="b__map__addpoint">
+                    <button class="-btn-addpoint mb-sm-3"><i></i>Add Point</button>
+                    <div>
+                      <p>Perimeter</p>
+                      <p><strong>54.35㎡</strong></p>
+                      <hr class="my-2">
+                      <p>Area</p>
+                      <p><strong>200.00㎡</strong></p>
+                    </div>
+                  </div>
+
+                  <div class="b__map__box">
+                    <ul>
+                      <li>面積（登記簿）</li>
+                      <li class="d-flex align-items-center"><input type="text" value="200.00" class="form-control me-3">㎡</li>
+                      <li>航空写真概測</li>
+                      <li class="d-flex">200.05㎡ <a href="" class="ms-auto"><u>やり直す</u></a></li>
+                      <li>採用する面積</li>
+                      <li>
+                        <select name="" id="" class="form-control">
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">確認する</a>
+                    </div>
+                  </div>
+
+                  <div class="b__map__maker"></div>
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 3 -->
+      <div class="modal fade modal-s1" id="TaishouTokutei_Address3_Modal" tabindex="-1" aria-labelledby="TaishouTokutei_Address3_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="TaishouTokutei_Address3_ModalLabel"><i class="ic-maker-map me-3"></i>住所で特定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address1_Modal"><span class="number">1</span> 対象地の特定</a></li>
+                  <li class="done"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address2_Modal"><span class="number">2</span> 面積を測定</a></li>
+                  <li class="current last"><a href="" data-bs-toggle="modal" data-bs-target="#TaishouTokutei_Address3_Modal"><span class="number">3</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0 d-flex flex-column">
+
+                <div class="bmodal__list">
+                  <ul class="mb-5 text-center text-sm-start">
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">所在地</div>
+                      <div>〒780-0965 高知県高知市</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">緯度</div>
+                      <div>33.567960</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">経度</div>
+                      <div>133.504472</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">面積</div>
+                      <div>200.00㎡</div>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="d-none d-md-block mt-auto text-center">
+                  <a href="" class="btn -brown -small">測定をやり直す</a>
+                  <a href="" class="btn -plus -small ms-3">この内容で保存する</a>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End TaishouTokutei_Kouzu_Modal -->
+
+
+      <!-- Start RoadHantei -->
+      <!-- Modal -->
+      <div class="modal fade modal-s1" id="RoadHantei_Modal" tabindex="-1" aria-labelledby="RoadHantei_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-flex align-items-center" id="RoadHantei_ModalLabel"><i class="ic-duong me-3"></i>街路条件判定／幅員測定</h4>
+            </div>
+            <div class="modal-body">
+
+              <div class="b__map__iframe d-flex align-items-center justify-content-center">
+                <div class="text-center w-100">
+                  <p class="mb-4">特定したい物件の住所、もしくは近隣の住所を検索しましょう</p>
+
+                  <div class="msearch">
+                    <div class="msearch__field__wrap">
+                      <input type="text" class="msearch__field form-control" placeholder="住所を入力して検索">
+                    </div>
+                    <button type="button" class="msearch__submit d-none d-md-block" data-bs-toggle="modal" data-bs-target="#RoadHantei1_Modal">検索</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <a href="RoadHantei_step2.html" class="active"><i class="ic-search"></i> 検索</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Modal Step 1 -->
+      <div class="modal fade modal-s1" id="RoadHantei1_Modal" tabindex="-1" aria-labelledby="RoadHantei1_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="RoadHantei1_ModalLabel"><i class="ic-duong me-3"></i>街路条件判定／幅員測定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first current"><a href="" data-bs-toggle="modal" data-bs-target="#RoadHantei_Modal"><span class="number">1</span> 幅員を測定</a></li>
+                  <li class="disabled"><a href="RoadHantei_step2.html"><span class="number">2</span> 項目を入力</a></li>
+                  <li class="disabled last"><a href="" data-bs-toggle="modal" data-bs-target="#RoadHantei3_Modal"><span class="number">3</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+
+                <div class="b__map">
+                  <div class="b__map__iframe">
+                    <img src="images/map.jpg" alt="">
+                  </div>
+
+                  <div class="b__map__addpoint">
+                    <div>
+                      <p>Distance</p>
+                      <p><strong>36.00㎡</strong></p>
+                    </div>
+                  </div>
+
+
+                  <div class="b__map__box">
+                    <ul>
+                      <li>現地計測</li>
+                      <li class="d-flex align-items-center"><input type="text" value="36.00" class="form-control me-3">m</li>
+                      <li>航空写真概測</li>
+                      <li class="d-flex">36.00m <a href="" class="ms-auto"><u>やり直す</u></a></li>
+                      <li>採用する面積</li>
+                      <li>
+                        <select name="" id="" class="form-control">
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                          <option value="">航空写真概測</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <hr class="my-3 d-none d-md-block">
+                    <div class="px-4 pb-3 d-none d-md-block">
+                      <a href="" class="btn -plus">確認する</a>
+                    </div>
+                  </div>
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Modal Step 3 -->
+      <div class="modal fade modal-s1" id="RoadHantei3_Modal" tabindex="-1" aria-labelledby="RoadHantei3_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="RoadHantei3_ModalLabel"><i class="ic-duong me-3"></i>街路条件判定／幅員測定</h4>
+              <div class="steps ms-auto me-auto me-md-0">
+                <ul>
+                  <li class="first done"><a href="" data-bs-toggle="modal" data-bs-target="#RoadHantei_Modal"><span class="number">1</span> 幅員を測定</a></li>
+                  <li class="done"><a href="RoadHantei_step2.html"><span class="number">2</span> 項目を入力</a></li>
+                  <li class="current last"><a href="" data-bs-toggle="modal" data-bs-target="#RoadHantei3_Modal"><span class="number">3</span> 測定完了</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="modal-body pt-0">
+
+                <div class="bmodal__list">
+                  <ul class="mb-5 text-center text-sm-start">
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">接面道路区分①</div>
+                      <div>前面道路</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">建築法上の区分</div>
+                      <div>第42条1項号</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">道路幅員</div>
+                      <div>36.00m</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">方位</div>
+                      <div>南</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">種類</div>
+                      <div>国道</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">名称</div>
+                      <div>—</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">セットバック</div>
+                      <div>不要</div>
+                    </li>
+
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">歩道の状態</div>
+                      <div>有</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">舗装の種類</div>
+                      <div>アスファルト</div>
+                    </li>
+                    <li class="d-sm-flex">
+                      <div class="-li-w220 bmodal__list__lable">舗装の状態</div>
+                      <div>優る</div>
+                    </li>
+                  </ul>
+                  <div class="d-none d-lg-block text-center">
+                    <a href="" class="btn -brown -small">測定をやり直す</a>
+                    <a href="" class="btn -plus -small ms-3" data-bs-toggle="modal" data-bs-target="#RoadHantei4_Modal">この内容で保存する</a>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active" data-bs-toggle="modal" data-bs-target="#RoadHantei4_Modal">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Modal Step End -->
+      <div class="modal fade modal-s1" id="RoadHantei4_Modal" tabindex="-1" aria-labelledby="RoadHantei4_ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <button type="button" class="btn-close -fix d-none d-lg-block" data-bs-dismiss="modal" aria-label="Close">戻る</button>
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title d-none d-md-flex align-items-center" id="RoadHantei4_ModalLabel"><i class="ic-duong me-3"></i>街路条件判定／幅員測定</h4>
+            </div>
+            <div class="modal-body pt-0">
+
+              <div class="bmodal__list">
+              <ul class="mb-5 text-center text-sm-start">
+                <li class="d-md-flex">
+                  <div class="-li-w220 bmodal__list__lable">接面状況区分</div>
+                  <div>
+                    <select name="" id="" class="minw170px">
+                      <option value="">二方路</option>
+                      <option value="">二方路</option>
+                      <option value="">二方路</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="d-md-flex">
+                  <div class="-li-w220 bmodal__list__lable d-none d-sm-block">接面道路区分</div>
+                  <div class="flex-grow-1">
+                    <div class="d-sm-flex align-items-center mb-3 mb-sm-0">
+                      <div class="minw100px bmodal__list__label">区分①</div>
+                      <div class="mb-3 mb-sm-0">前面道路</div>
+                      <div class="ms-auto">
+                        <a href="" class="b__links"><i class="icon-edit"></i> <u>編集する</u></a>
+                        <div class="vr"></div>
+                        <a href="" class="b__links"><i class="icon-trash"></i> <u>項目を削除</u></a>
+                      </div>
+                    </div>
+                    <hr class="d-none d-sm-block my-3">
+                    <div class="d-sm-flex align-items-center">
+                      <div class="minw100px bmodal__list__label">区分②</div>
+                      <div class="mb-3 mb-sm-0">
+                        <select name="" id="" class="minw170px">
+                          <option value="">背面道路</option>
+                          <option value="">背面道路</option>
+                          <option value="">背面道路</option>
+                        </select>
+                      </div>
+                      <div class="ms-auto mb-3 mb-sm-0">
+                        <div>
+                          <a href="" class="btn -s2 -mask"><i class="ic-duong"></i>判定／測定する</a>
+                        </div>
+                      </div>
+                    </div>
+                    <hr class="my-3">
+                    <div>
+                      <a href="" class="b__links"><i class="icon-plus"></i> <u>区分を追加する</u></a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="d-none d-lg-block text-center">
+                <a href="" class="btn -brown -small">測定をやり直す</a>
+                <a href="" class="btn -plus -small ms-3">この内容で保存する</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb__bukkenfix -modal d-md-none">
+          <ul class="row gx-0">
+            <li class="col-6">
+              <button type="button" class="" data-bs-dismiss="modal" aria-label="Close"><i class="icon-angle-right rotate-180"></i> 戻る</button>
+            </li>
+            <li class="col-6 -right">
+              <button type="button" class="active">保存する <i class="ic-plus-circle-white -plus"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End RoadHantei -->
 
       <ul class="block__bukkenfix d-none d-md-block">
         <li>
@@ -1276,15 +2054,27 @@
             <a href=""><i class="icon-angle-right rotate-180"></i> 戻る</a>
           </li>
           <li class="col-6 -right">
-            <a href=""><i class="icon-plus"></i> 保存</a>
+            <a href="" class="active"><i class="icon-plus"></i> 保存</a>
           </li>
         </ul>
       </div>
 
     </div> <!-- .wrapper -->
     <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/jquery.dataTables.min.js"></script> -->
-    <!-- <script type="text/javascript" charset="utf8" src="libs/DataTables/dataTables.bootstrap5.min.js"></script> -->
     <script src="js/main.js"></script>
+    <script>
+      $('.b__map__box').click(function(e) {
+        $(this).toggleClass('active')
+        $(this).closest('.modal').find('.mb__bukkenfix .-right button').toggleClass('active')
+
+      })
+
+      $(document).ready(function(){
+
+        $(window.location.hash).modal("show");
+      });
+
+    </script>
+
   </body>
 </html>

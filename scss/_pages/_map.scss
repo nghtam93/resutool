@@ -9,6 +9,7 @@
     li{
         position: relative;
         min-width: 60px;
+        text-align: center;
         &:not(:last-child){
             margin-right: 40px;
             &:after{
@@ -79,11 +80,10 @@
 
 
 .b__map{
-    position: relative;
     &__box{
         position: absolute;
         top: 20%;
-        left: 0;
+        left: 2%;
         width: 100%;
         max-width: 190px;
         z-index: 1;
@@ -169,7 +169,7 @@
     &__addpoint{
         position: absolute;
         top: 20%;
-        right: 0;
+        right: 2%;
         min-width: 190px;
         z-index: 2;
         background: #fff;
@@ -278,14 +278,33 @@
     .msearch__field {
         padding: 10px 50px;
     }
+    .modal-dialog {
+        max-width: 100%;
+        height: 100vh;
+        padding: 0 1.5rem;
+    }
 }
 @media (max-width: 767px){
 
+    .modal.show{
+        .b__map__box{
+            opacity: 1;
+            top: calc(100% - 115px);
+             &.active{
+                top: auto;
+                bottom: 70px;
+            }
+        }
+    }
+    .b__map__search {
+        left: 2%;
+    }
     .b__map__box {
         position: fixed;
         z-index: 2;
-        top: calc(100% - 115px);
+        top: 100vh;
         left: 0;
+        opacity: 0;
         max-width: 100%;
         box-shadow: 0 0 12px rgba(69, 76, 85, .16);
         padding: 18px 30px 30px;
@@ -310,6 +329,9 @@
     }
     .b__map__addpoint {
         width: 100%;
+        top: auto;
+        bottom: 0;
+        right: 0;
         .-btn-addpoint {
             position: absolute;
             top: 10px;
@@ -325,15 +347,16 @@
             top: 2px;
         }
     }
-    .b__map__iframe {
-        // height: 300px;
-    }
     .steps li:not(:last-child) {
-        margin-right: 25px;
+        margin-right: 15px;
     }
     .b__map__search{
         max-width: 100%;
         min-width: auto;
+    }
+    .b__map__iframe {
+        height: 420px;
+        padding: 0 1.5rem;
     }
     .bmodal__list{
         li{

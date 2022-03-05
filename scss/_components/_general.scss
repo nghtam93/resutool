@@ -202,7 +202,9 @@
                 opacity: 0;
                 transition: all .2s;
                 .dropdown-toggle{
-                    display: inline-block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 28px;
                     height: 28px;
                     background-color: #fff;
@@ -275,7 +277,7 @@
 }
 
 
-table.dataTable{
+table{
     thead{
         th {
             background: transparent !important;
@@ -290,22 +292,25 @@ table.dataTable{
             line-height: 17px;
         }
         .sorting span:before, .sorting span:after {
-            content: "\e919";
-            font-family: 'icomoon';
+            content: "";
             position: absolute;
-            top: -2px;
-            font-size: 4px;
-            font-weight: 400;
+            top: 4px;
+            -webkit-mask-image: url(../img/arrow-up.svg);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            background-color: #707070;
+            width: 7px;
+            height: 5px;
         }
         .sorting span:after {
-            content: "\e918";
-            top: 4px;
+            -webkit-mask-image: url(../img/arrow-down.svg);
+            top: 10px;
         }
         .sorting_desc span:after {
-            top: 2px;
+            top: 7px;
         }
         .sorting_asc span::before{
-            top: 0;
+            top: 7px;
         }
         .sorting_asc span:after,.sorting_desc span:before {
             opacity: 0;
@@ -438,6 +443,7 @@ table.dataTable{
         padding: 0 25px;
         font-size: 10px;
         background: #F9F9F9;
+        border-bottom: 1px solid #d6d6d6;
     }
     &__content{
         padding: 0 25px;
@@ -463,33 +469,35 @@ table.dataTable{
         }
 
         .checkbox__fake{
-            height: 20px;
-            padding-left: 35px;
+            height: 14px;
+            padding-left: 20px;
         }
         .checkbox__fake .checkmark::after {
-            left: 7px;
-            top: 2px;
-            width: 6px;
-            height: 12px;
+            left: 4px;
+            top: 1px;
+            width: 4px;
+            height: 8px;
         }
         .checkmark {
-            height: 20px;
-            width: 20px;
+            height: 14px;
+            width: 14px;
         }
         
     }
 }
 .modal-s1{
     .modal-dialog {
-        padding-bottom: 80px;
+        // padding-bottom: 80px;
     }
     .modal-content {
         border-radius: 8px;
+            overflow: hidden;
     }
     .modal-header {
         padding: 27px 35px;
     }
     .modal-body {
+        min-height: 485px;
         padding: 45px 35px;
         .-col-left{
             border-right: 1px solid #F1F1F1;
@@ -740,7 +748,7 @@ select{
         color: #666666;
         font-size: 18px;
         font-weight: 500;
-        padding: 28px 50px;
+        padding: 28px 28px 28px 50px;
         box-shadow: inset 0 -1px 0 #F1F1F1;
         &::after{
             content: "\e905";
@@ -844,17 +852,23 @@ select{
         .el__label{
             margin-top: 0;
         }
-        .el__value{
-            // font-size: 12px;
-            // font-weight: 500;
-            // color: #666666;
+
+        .box__toggle.active{
+            .box__toggle__header {
+                border-color: #fff;
+            }
         }
         .box__toggle__header {
             border-bottom: 1px solid #F1F1F1;
         }
-        .box__toggle li {
+        .box__toggle li{
             border-bottom: 1px solid #F1F1F1;
+            &:last-child{
+                border-bottom: 0;
+            }
         }
+
+
     }
 }
 
@@ -1084,8 +1098,11 @@ select{
     }
     .modal-s1{
         .modal-dialog {
-            max-width: 300px;
-            margin: 50px auto;
+            max-width: 100%;
+            padding: 1.5rem;
+        }
+        .modal-header {
+            padding: 20px 12px;
         }
     }
     .mb__bukkenfix{
