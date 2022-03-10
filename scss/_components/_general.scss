@@ -62,6 +62,41 @@
     margin-left: var(--menu-left);
     width: calc( 100% - var(--menu-left));
     padding: 57px 70px;
+    @media (max-width: 1199px){
+        &.-modal-step{
+            padding: 50px 58px var(--menu-mb);
+        }
+    }
+    @media (max-width: 575px){
+
+        &.-modal-step{
+            padding: 35px 58px var(--menu-mb);
+        }
+    }
+    @media (min-width: 1200px){
+        &.-modal-step{
+            .sc__box__header{
+            }
+            .bmodal__list{
+                padding-left: 36px;
+                margin-right: 20px;
+                height: 485px;
+                overflow: auto;
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: $color_primary;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+            }
+        }
+    }
 
 }
 .sc__box{
@@ -89,7 +124,7 @@
     &__content{
         padding: 30px;
         h6{
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 0;
         }
     }
@@ -425,12 +460,27 @@ table{
             font-size: 5px;
             font-weight: 400;
             transition: all .5s;
+            &.icon-arrow-up{
+                &:before{
+                    content: '';
+                    width: 10px;
+                    height: 6px;
+                    background: url(../img/arrow-up.svg);
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    display: inline-block;
+                }
+            }
         }
     }
     ul{}
     li{
+        min-height: 52px;
         padding: 15px 2px;
         border-bottom: 1px solid #CCCCCC;
+        div + div{
+            font-size: 14px;
+        }
     }
 }
 
@@ -690,8 +740,18 @@ table{
     &.-table-edit{
         bottom: -100px;
         transition: all .3s;
+        i{
+            left: 30px;
+            font-size: 28px;
+        }
+        a, button{
+            padding: 32.5px 55px;
+        }
         &.active{
             bottom: 0;
+            + .nav__mobile{
+                opacity: 0;
+            }
         }
     }
     .ic-plus-circle-white{
@@ -878,7 +938,14 @@ select{
         margin-left: 0;
         width: 100%;
         padding: 50px 30px var(--menu-mb);
-
+        &.-modal-step{
+            .sc__box__header{
+                padding-left: 0;
+            }
+            .bmodal__list{
+                padding-left: 0;
+            }
+        }
     }
     .sc__box__content {
         padding: 30px 25px;
@@ -1068,6 +1135,9 @@ select{
                 padding: 12px;
                 text-align: center;
                 margin-bottom: 8px;
+                &.-s2{
+                    background: #F9F9F9;
+                }
             }
             .el__value{
                 text-align: center;

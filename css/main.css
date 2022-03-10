@@ -65,6 +65,25 @@ hr {
 label {
   cursor: pointer; }
 
+.table__btn {
+  position: relative;
+  min-width: 115px;
+  padding: 8px 30px;
+  background-color: #EFEFEF;
+  border-radius: 7px;
+  font-size: 14px;
+  color: #666666;
+  border: 0;
+  transition: all .3s; }
+  .table__btn i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 14px; }
+  .table__btn:hover {
+    background-color: #fc8800;
+    color: #fff; }
+
 .icon-dots {
   display: inline-block;
   width: 23px;
@@ -182,6 +201,15 @@ label {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   border-radius: 1px; }
+
+.checkbox__fake.js-checkbox-all .checkmark:after {
+  transform: inherit;
+  width: 8px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  border-width: 0 0px 2px 0; }
 
 .-letter-1 {
   letter-spacing: 1px; }
@@ -317,33 +345,23 @@ label {
     min-width: 300px; }
     .btn.-plus.-small {
       min-width: 180px;
-      font-size: 12px;
       padding: 10px 30px; }
       .btn.-plus.-small::after {
-        top: calc(50% - 7px);
         right: 10px;
         width: 14px;
-        height: 14px;
-        line-height: 14px; }
+        height: 14px; }
     .btn.-plus::after {
-      content: "\e911";
-      font-family: 'icomoon';
+      content: "";
       display: inline-block;
-      font-size: 6px;
-      font-weight: 400;
       width: 24px;
       height: 24px;
-      border-radius: 50%;
-      background: #fff;
-      color: #fc8800;
       position: absolute;
-      top: calc(50% - 12px);
+      top: 50%;
+      transform: translateY(-50%);
       right: 18px;
-      text-align: center;
-      line-height: 25px;
-      text-indent: 2px; }
-    .btn.-plus:hover::after {
-      color: #0c4264; }
+      background-image: url(../img/plus-circle-white.svg);
+      background-repeat: no-repeat;
+      background-size: contain; }
   .btn.-secondary {
     min-width: 300px;
     font-weight: 500;
@@ -443,6 +461,10 @@ label {
 .w120px {
   flex: 0 0 auto;
   width: 120px; }
+
+.w130px {
+  flex: 0 0 auto;
+  width: 130px; }
 
 .w280px {
   flex: 0 0 auto;
@@ -737,6 +759,26 @@ label {
   margin-left: var(--menu-left);
   width: calc( 100% - var(--menu-left));
   padding: 57px 70px; }
+  @media (max-width: 1199px) {
+    .sc__content.-modal-step {
+      padding: 50px 58px var(--menu-mb); } }
+  @media (max-width: 575px) {
+    .sc__content.-modal-step {
+      padding: 35px 58px var(--menu-mb); } }
+  @media (min-width: 1200px) {
+    .sc__content.-modal-step .bmodal__list {
+      padding-left: 36px;
+      margin-right: 20px;
+      height: 485px;
+      overflow: auto; }
+      .sc__content.-modal-step .bmodal__list::-webkit-scrollbar {
+        width: 4px; }
+      .sc__content.-modal-step .bmodal__list::-webkit-scrollbar-track {
+        background: #f1f1f1; }
+      .sc__content.-modal-step .bmodal__list::-webkit-scrollbar-thumb {
+        background: #fc8800; }
+      .sc__content.-modal-step .bmodal__list::-webkit-scrollbar-thumb:hover {
+        background: #555; } }
 
 .sc__box {
   background: #FFFFFF;
@@ -756,7 +798,7 @@ label {
   .sc__box__content {
     padding: 30px; }
     .sc__box__content h6 {
-      font-size: 18px;
+      font-size: 16px;
       margin-bottom: 0; }
   .sc__box__icon {
     width: 82px;
@@ -969,9 +1011,20 @@ table thead .sorting_asc_disabled span:before, table thead .sorting_desc_disable
       font-size: 5px;
       font-weight: 400;
       transition: all .5s; }
+      .box__toggle__header i.icon-arrow-up:before {
+        content: '';
+        width: 10px;
+        height: 6px;
+        background: url(../img/arrow-up.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: inline-block; }
   .box__toggle li {
+    min-height: 52px;
     padding: 15px 2px;
     border-bottom: 1px solid #CCCCCC; }
+    .box__toggle li div + div {
+      font-size: 14px; }
 
 .table__fake {
   border: 1px solid #cccc;
@@ -1162,8 +1215,15 @@ table thead .sorting_asc_disabled span:before, table thead .sorting_desc_disable
   .mb__bukkenfix.-table-edit {
     bottom: -100px;
     transition: all .3s; }
+    .mb__bukkenfix.-table-edit i {
+      left: 30px;
+      font-size: 28px; }
+    .mb__bukkenfix.-table-edit a, .mb__bukkenfix.-table-edit button {
+      padding: 32.5px 55px; }
     .mb__bukkenfix.-table-edit.active {
       bottom: 0; }
+      .mb__bukkenfix.-table-edit.active + .nav__mobile {
+        opacity: 0; }
   .mb__bukkenfix .ic-plus-circle-white {
     left: auto;
     right: 25px;
@@ -1286,6 +1346,10 @@ select {
     margin-left: 0;
     width: 100%;
     padding: 50px 30px var(--menu-mb); }
+    .sc__content.-modal-step .sc__box__header {
+      padding-left: 0; }
+    .sc__content.-modal-step .bmodal__list {
+      padding-left: 0; }
 
   .sc__box__content {
     padding: 30px 25px; }
@@ -1410,6 +1474,8 @@ select {
       padding: 12px;
       text-align: center;
       margin-bottom: 8px; }
+      .accordion.-detail .el__label.-s2 {
+        background: #F9F9F9; }
     .accordion.-detail .el__value {
       text-align: center;
       margin-bottom: 24px; }

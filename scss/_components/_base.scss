@@ -70,6 +70,28 @@ label{
     cursor: pointer;
 }
 
+.table__btn{
+    position: relative;
+    min-width: 115px;
+    padding: 8px 30px;
+    background-color: #EFEFEF;
+    border-radius: 7px;
+    font-size: 14px;
+    color: #666666;
+    border: 0;
+    transition: all .3s;
+    i{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 14px;
+    }
+    &:hover{
+        background-color:#fc8800;
+        color: #fff;
+    }
+}
+
 .icon-dots{
     display: inline-block;
     width: 23px;
@@ -151,6 +173,15 @@ label{
 .checkbox__fake input:checked ~ .checkmark:after{display:block}
 .checkbox__fake .checkmark:after{left:5px;top:3px;width:4px;height:7px;border:solid white;border-width:0 2px 2px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);border-radius:1px}
 
+.checkbox__fake.js-checkbox-all .checkmark:after {
+    transform: inherit;
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-width: 0 0px 2px 0;
+}
 .-letter-1{
     letter-spacing: 1px;
 }.-letter-2{
@@ -269,37 +300,29 @@ label{
         min-width: 300px;
         &.-small{
             min-width: 180px;
-            font-size: 12px;
             padding: 10px 30px;
             &::after{
-                top: calc(50% - 7px);
                 right: 10px;
                 width: 14px;
                 height: 14px;
-                line-height: 14px;
             }
         }
         &::after {
-            content: "\e911";
-            font-family: 'icomoon';
+            content: "";
             display: inline-block;
-            font-size: 6px;
-            font-weight: 400;
             width: 24px;
             height: 24px;
-            border-radius: 50%;
-            background: #fff;
-            color: #fc8800;
             position: absolute;
-            top: calc(50% - 12px);
+            top: 50%;
+            transform: translateY(-50%);
             right: 18px;
-            text-align: center;
-            line-height: 25px;
-            text-indent: 2px;
+            background-image: url(../img/plus-circle-white.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
         }
         &:hover{
             &::after {
-                color: #0c4264;
+
             }
         }
     }
@@ -429,6 +452,10 @@ label{
 .w120px{
     flex: 0 0 auto;
     width: 120px;
+}
+.w130px{
+    flex: 0 0 auto;
+    width: 130px;
 }
 .w280px{
     flex: 0 0 auto;
