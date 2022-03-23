@@ -110,7 +110,7 @@
         }
     }
     &__header{
-        padding: 30px 36px;
+        padding: 30px 30px;
         + hr{
             background-color: #F1F1F1;
         }
@@ -169,6 +169,18 @@
 				height: 48px;
 			}
 		}
+        &.-list{
+            .sc__box__content {
+                padding: 40px 24px 26px;
+            }
+            .table-wrapper{
+                  height: 348px;
+            }
+            .checkbox__fake .checkmark:after {
+                left: 3px;
+                top: 1px;
+            }
+        }
 		.table{
             font-size: 10px;
             thead{
@@ -185,6 +197,33 @@
           
             >:not(caption)>*>* {
                 padding: 15px 5px;
+            }
+            &.-tbl-company{
+                font-size: 12px;
+                >:not(caption)>*>* {
+                    padding: 8px 5px;
+                }
+                .checkmark {
+                    height: 12px;
+                    width: 12px;
+                    border-radius: 3px;
+                }
+                td{
+                    &:first-child {
+                        padding-left: 8px;
+                    }
+                    &:last-child{
+                        width: 30px;
+                    }
+                }
+                .table__actiion .dropdown-toggle {
+                    width: 18px;
+                    height: 18px;
+                    i {
+                        width: 10px;
+                    }
+                }
+
             }
         }
         .form-check-input{
@@ -259,6 +298,12 @@
                 }
                 .dropdown-item {
                     padding: 0.25rem 22px;
+                    color: #666666;
+                    text-decoration: none;
+                }
+                li{
+                    padding: 0;
+                    border: 0;
                 }
             }
 
@@ -309,6 +354,19 @@
         }
     }
 
+    @media (max-width: 991px){
+        .el__label {
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width: 575px){
+        .sc__box__avatar.-mb-large{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
 }
 
 
@@ -603,6 +661,45 @@ table{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+}
+
+.modal{
+    &.-noti{
+        .modal-body{
+            padding: 40px;
+            word-break: break-all;
+        }
+        .modal-footer{
+            padding: 0px 40px 40px;
+            border-top: 0;
+        }
+        .btn{
+            font-size: 12px;
+            min-width: 180px;
+            padding: 10px 15px;
+        }
+    }
+    @media (min-width: 576px){
+        &.-noti{
+            .modal-dialog{
+                max-width: 460px;
+            }
+        }
+    }
+    @media (max-width: 575px){
+        &.-noti{
+            .modal-body {
+                padding: 16px;
+            }
+            .modal-footer {
+                padding: 0px 16px 16px;
+            }
+            .btn {
+                min-width: 0;
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -1186,4 +1283,10 @@ select{
     .input-group-lg > .form-control, .input-group-lg > .form-select, .input-group-lg > .input-group-text, .input-group-lg > .btn {
         padding: 0.3rem 1rem;
     }
+}
+
+/*Form*/
+input.is-invalid, select.is-invalid, textarea.is-invalid {
+    background-color: #FFF9EF;
+    border: 2px solid #ED8D34;
 }

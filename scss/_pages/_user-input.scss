@@ -1,0 +1,95 @@
+.userinput{
+	&__wrapper{
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 36px 0;
+	}
+	&__logo {
+	    display: block;
+	    text-align: center;
+	}
+	&__form {
+		font-size: 12px;
+		font-weight: 500;
+	    background: #fff;
+	    border-radius: 10px;
+	    box-shadow: 0 0 12px rgba(69, 76, 85, .16);
+	    .el__header, .el__content, .el__footer{
+	    	padding: 35px 40px;
+	    }
+	    .el__header{
+	    	font-size: 24px;
+	    	font-weight: 500;
+	    	color: #666666;
+	    	border-bottom: 1px solid #CCCCCC;
+	    	i{
+	    		font-size: 22px;
+	    	}
+	    }
+	    .el__label{
+	    	padding: 8px 0;
+	    }
+	    .form-check{
+	    	&-input {
+			    width: 22px;
+			    height: 22px;
+			    margin-top: 0;
+			}
+			a{
+		    	color: #51A1B9;
+		    	text-decoration: underline;
+		    }
+	    }
+	    .el__footer{
+	    	border-top: 1px solid #CCCCCC;
+	    	.btn{
+	    		min-width: 0;
+	    		width: 100%;
+	    		&.-three{
+			        border: 1px solid #CCCCCC;
+			        background: #CCCCCC;
+			        color: #FFFFFF;
+			        &:hover{
+			            background: #666666;
+			            color: #fff;
+			        }
+			    }
+	    	}
+	    }
+	}
+	@media (max-width: 991px){
+		&__form{
+			.el__label{
+				margin-bottom: 0;
+			}
+		}
+	}
+	@media (max-width: 575px){
+		&__form{
+			.el__header{
+				padding: 18px 30px;
+				font-size: 20px;
+				i{
+					font-size: 18px;
+				}
+			}
+			.el__content, .el__footer {
+			    padding: 30px;
+			}
+			.el__label {
+			    padding: 14px 0;
+			    background: #F5F5F5;
+			    text-align: center;
+			}
+			.el__label{
+				margin-bottom: 12px;
+			}
+			.form-control {
+			    min-height: 54px;
+			}
+			.form-check{
+			    font-size: 14px;
+			}
+		}
+	}
+}

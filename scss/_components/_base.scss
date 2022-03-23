@@ -69,7 +69,14 @@ hr{
 label{
     cursor: pointer;
 }
-
+input, select{
+    &:focus{
+        background-color: #fff;
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+    }
+}
 .table__btn{
     position: relative;
     min-width: 115px;
@@ -337,6 +344,17 @@ label{
             color: #fff;
         }
     }
+    &.-three{
+        min-width: 300px;
+        font-weight: 500;
+        border: 1px solid #F1F1F1;
+        background: #F1F1F1;
+        color: #909090;
+        &:hover{
+            background: #666666;
+            color: #fff;
+        }
+    }
     &.-s2{
         font-size: 12px;
         font-weight: 700;
@@ -347,7 +365,14 @@ label{
         color: #51A1B9;
         border-radius: 24px;
         box-shadow: 0 0 12px rgba(69, 76, 85, .16%);
-
+        &.-center{
+            padding: 11px 20px;
+            i{
+                position: relative;
+                left: 0;
+                font-size: 12px;
+            }
+        }
         &.-mask{
             &:hover{
                 i{
@@ -420,12 +445,44 @@ label{
     }
 }
 
+.alert{
+    border: 2px solid transparent;
+    border-radius: 0;
+    &.alert-danger {
+        border-color: #FC8800;
+        background: #FFF9EF;
+        color: #FC8800;
+        li{
+            position: relative;
+            padding-left: 35px;
+            + li{
+                margin-top: 4px;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: url(../img/exclamation-triangle.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
 .vr {
     height: 36px;
     margin: 0 15px;
 }
 .w100{
     width: 100%;
+}
+.flex-w100{
+    width: calc(100% - 100px);
 }
 .mw70px{
     width: 100%;
@@ -439,9 +496,21 @@ label{
     width: 100%;
     max-width: 100px;
 }
+.mw150px{
+    width: 100%;
+    max-width: 150px;
+}
 .mw170px{
     width: 100%;
     max-width: 170px;
+}
+.mw240px{
+    width: 100%;
+    max-width: 240px;
+}
+.mw310px{
+    width: 100%;
+    max-width: 310px;
 }
 .minw100px{
     min-width: 100px;
@@ -473,6 +542,11 @@ label{
     }
 }
 @media (max-width: 575px){
+    .mw100px, .mw150px, .flex-w100{
+        width: 100%;
+        max-width: 100%;
+    }
+
     .w120px{
         flex: 0 0 auto;
         width: auto;

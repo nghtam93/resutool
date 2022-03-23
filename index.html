@@ -108,7 +108,7 @@
                 </table>
                 <div class="sc__box__content">
                   <div class="text-center">
-                    <a href="" class="btn -plus">新しく物件を登録する</a>
+                    <a href="" class="btn -plus"  data-bs-toggle="modal" data-bs-target="#registerModal">新しく物件を登録する</a>
                   </div>
                 </div>
               </div>
@@ -153,6 +153,25 @@
           </div>
         </div>
 
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade -noti" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registerModalLabel">確認</h5>
+            </div>
+            <div class="modal-body">
+              <p>●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●●します。よろしいですか？</p>
+            </div>
+            <div class="modal-footer justify-content-center flex-nowrap">
+              <button type="button" class="btn -three" data-bs-dismiss="modal">キャンセル</button>
+              <button type="button" class="btn">OK</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="nav__mobile">

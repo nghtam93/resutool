@@ -18,7 +18,10 @@ $(document).ready(function(){
 
         init(){
             this.shiftToSelect();
-            this.selectAll();
+
+            if(this.selectAllTarget){
+                this.selectAll();
+            }
         },
         shiftToSelect(){
             const checkboxes = this.checkboxes;let lastChecked

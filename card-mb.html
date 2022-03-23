@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+
+    <style>
+      *,*::before,*::after{box-sizing:border-box;}
+      body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+      button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;}
+      button,select{text-transform:none;}
+      input,button,select,optgroup,textarea{margin:0;font-family:inherit;font-size:inherit;line-height:inherit;}
+      button:not(:disabled),[type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled){cursor:pointer;}
+      body{color:#666666;font-weight:500;font-size:14px;line-height:normal;position:relative;background:#F9F9F9;}
+      hr{height:1px;margin:1rem 0;color:#CCCCCC;border:0;background-color:#CCCCCC;}
+      .text-center{text-align:center!important;}
+      .d-none{display:none!important;}
+      .d-flex{display:flex!important;}
+      .align-items-center{align-items:center!important;}
+      .justify-content-center{justify-content:center!important;}
+      .form-control{display:block;width:100%;min-height:42px;padding:0.375rem 0.75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background-color:#fff;background-clip:padding-box;border:1px solid #ced4da;border-radius:7px;transition:border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;}
+      .mb-35{margin-bottom:35px!important;}
+      .ms-3{margin-left:1rem!important;}
+      .me-3{margin-right:1rem!important;}
+      .mb-3{margin-bottom:1rem!important;}
+      .mb-4{margin-bottom:1.5rem!important;}
+      .ms-auto{margin-left:auto!important;}
+      .input-group{position:relative;display:flex;flex-wrap:wrap;align-items:stretch;width:100%;margin-bottom:50px;}
+      .btn{position:relative;min-width:220px;background:#FC8800;border-radius:8px;border:0;line-height:24px;padding:17px 30px;font-weight:bold;font-size:14px;color:#FFFFFF;letter-spacing:2px;transition:all .3s;border:1px solid #fc8800;}
+      .btn:hover{color:#ffffff;box-shadow:0 0 10px #fff;background:#51A1B9;border-color:#51A1B9;}
+      .btn.-three{font-weight:500;border:1px solid #CCCCCC;background:#CCCCCC;color:#fff;}
+      .btn.-three:hover{background:#666666;color:#fff;}
+      .mw100px{width:100%;max-width:100px;}
+      .flex-mw100px{width:calc(100% - 100px);}
+      .mw150px{width:100%;max-width:150px;}
+      .flex-mw150px{width:calc(100% - 150px);}
+      .mw200px{width:100%;max-width:200px;}
+      .flex-mw200px{width:calc(100% - 200px);}
+      .mw310px{width:100%;max-width:310px;}
+      .flex-mw310px{width:calc(100% - 310px);}
+      .card__wrapper{max-width:960px;margin:auto;padding:36px 70px;}
+      .card__form{font-size:12px;font-weight:500;background:#fff;border-radius:10px;box-shadow:0 0 12px rgb(69 76 85 / 16%);}
+      .card__form .el__header,.card__form .el__content{padding:35px 40px;}
+      .card__form .el__footer{padding:0 35px 80px;}
+      .card__form .el__header{font-size:24px;font-weight:500;color:#666666;border-bottom:1px solid #CCCCCC;}
+      .card__form .el__label{font-size:16px;}
+      @media (max-width:1199px){
+        .card__wrapper{margin:auto;}
+      }
+      @media (max-width:767px){
+        .mw200px,.flex-mw200px{width:100%;max-width:100%;}
+        .btn{min-width:0;width:100%;}
+      }
+      @media (max-width:575px){
+        .mw100px,.flex-mw100px,.mw150px{width:100%;max-width:100%;}
+        .card__wrapper{max-width:960px;margin:auto;padding:100px 36px;}
+        .card__form .el__header,.card__form .el__content{padding:24px 30px;}
+        .el__label--mb{background-color:#F5F5F5;padding:14px 10px;text-align:center;}
+        .input-group{margin-bottom:30px;}
+        .mb-35{margin-bottom:20px!important;}
+        .card__form .el__footer{padding:0 35px 50px;}
+      }
+      @media (min-width:576px){
+        .d-sm-block{display:block!important;}
+        .d-sm-flex{display:flex!important}
+        .mb-sm-0{margin-bottom:0!important;}
+        .text-sm-start{text-align:left!important;}
+        .mb-sm-3{margin-bottom:1rem!important;}
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="card__page">
+      <div class="container">
+        <div class="card__wrapper">
+          <div class="card__form mb-4 mb-sm-5">
+
+            <div class="el__header">
+
+            </div>
+
+              <form action="">
+                <div class="el__content">
+                  <div class="input-group">
+                    <p class="mw200px el__label">お客様情報</p>
+                    <div class="flex-mw200px">
+                      <div class="d-sm-flex">
+                        <p class="el__label--mb">会員ID</p>
+                        <p class="ms-auto text-center text-sm-start">●●●●●●●●</p>
+                      </div>
+                      <hr class="d-none d-sm-block">
+                      <div class="d-sm-flex">
+                        <p class="el__label--mb">お名前</p>
+                        <p class="ms-auto text-center text-sm-start">●●●●●●●●. 様</p>
+                      </div>
+
+                    </div>
+                  </div>
+                  <hr class="mb-35">
+                  <div class="input-group">
+                    <p class="mw200px el__label">現在のカード情報</p>
+                    <div class="flex-mw200px">
+                      <div class="d-sm-flex">
+                        <p class="el__label--mb">カード番号</p>
+                        <p class="ms-auto text-center text-sm-start">*************111</p>
+                      </div>
+                      <hr class="d-none d-sm-block">
+                      <div class="d-sm-flex">
+                        <p class="el__label--mb">有効期限(MM/YY)</p>
+                        <p class="ms-auto text-center text-sm-start">01/22</p>
+                      </div>
+                      <hr class="d-none d-sm-block">
+                      <div class="d-sm-flex">
+                        <p class="el__label--mb">カード名義人</p>
+                        <p class="ms-auto text-center text-sm-start">MASAKI OKAMURA</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="mb-35">
+                  <div class="input-group">
+                    <p class="mw200px el__label">新しいカード情報</p>
+                    <div class="flex-mw200px">
+                      <div class="d-sm-flex mb-4 mb-sm-3">
+                        <p class="mw100px el__label--mb">カード種別</p>
+                        <div class="flex-mw100px ms-auto">
+                          <select name="" id="" class="form-control mw150px">
+                            <option value=""></option>
+                            <option value="">カード種別</option>
+                            <option value="">カード種別</option>
+                            <option value="">カード種別</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="d-sm-flex mb-4 mb-sm-3">
+                        <p class="mw100px el__label--mb">カード番号</p>
+                        <div class="flex-mw100px ms-auto">
+                          <input type="text" class="form-control mw310px">
+                        </div>
+                      </div>
+
+                      <div class="d-sm-flex mb-4 mb-sm-3">
+                        <p class="mw100px el__label--mb">有効期限</p>
+                        <div class="flex-mw100px ms-auto d-flex">
+
+                          <div class="mw100px d-flex align-items-center me-3">
+                            <select name="" id="" class="form-control">
+                              <option value=""></option>
+                              <option value="">年</option>
+                              <option value="">年</option>
+                              <option value="">年</option>
+                            </select>
+                            <span class="ms-3">年</span>
+                          </div>
+
+                          <div class="mw100px d-flex align-items-center">
+                            <select name="" id="" class="form-control">
+                              <option value=""></option>
+                              <option value="">月</option>
+                              <option value="">月</option>
+                              <option value="">月</option>
+                            </select>
+                            <span class="ms-3">月</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-sm-flex mb-4 mb-sm-3">
+                        <p class="mw100px el__label--mb">カード名義人</p>
+                        <div class="flex-mw100px ms-auto">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="el__footer d-sm-flex justify-content-center">
+                  <button type="button" class="btn -three mb-3 mb-sm-0 me-3">戻る</button>
+                  <button type="button" class="btn">保存</button>
+                </div>
+              </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div> <!-- .wrapper -->
+  </body>
+</html>
