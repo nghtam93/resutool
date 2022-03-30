@@ -43,12 +43,19 @@
       .flex-mw270px{width:calc(100% - 270px);}
       .mw310px{width:100%;max-width:310px;}
       .flex-mw310px{width:calc(100% - 310px);}
-      .card__wrapper{max-width:960px;margin:auto;padding:36px 70px;}
+      .card__wrapper{max-width:1100px;margin:auto;padding:36px 70px;}
       .card__form{font-size:12px;font-weight:500;background:#fff;border-radius:10px;box-shadow:0 0 12px rgb(69 76 85 / 16%);}
       .card__form .el__header,.card__form .el__content{padding:35px 40px;}
       .card__form .el__footer{padding:0 35px 80px;}
       .card__form .el__header{font-size:24px;font-weight:500;color:#666666;border-bottom:1px solid #CCCCCC;}
       .card__form .el__label{font-size:16px;}
+
+      .select__wrap{position:relative;width:100%;}
+      .select__wrap select{-webkit-appearance:none;-moz-appearance:none;text-indent:1px;text-overflow:'';}
+      .select__wrap::before,.select__wrap::after{content:"";position:absolute;right:12px;z-index:11;display:block;width:4px;height:4px;border-top:1px solid #666666;border-left:1px solid #666666;}
+      .select__wrap::before{top:16px;transform:rotate(45deg);}
+      .select__wrap::after{top:22px;transform:rotate(225deg);}
+
       @media (max-width:1199px){
         .card__wrapper{margin:auto;}
       }
@@ -128,12 +135,14 @@
                       <div class="d-flex mb-3">
                         <p class="mw100px">カード種別</p>
                         <div class="flex-mw100px ms-auto">
-                          <select name="" id="" class="form-control mw150px">
-                            <option value=""></option>
-                            <option value="">カード種別</option>
-                            <option value="">カード種別</option>
-                            <option value="">カード種別</option>
-                          </select>
+                          <div class="select__wrap mw150px">
+                            <select name="" id="" class="form-control">
+                              <option value=""></option>
+                              <option value="">カード種別</option>
+                              <option value="">カード種別</option>
+                              <option value="">カード種別</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
 
@@ -149,22 +158,27 @@
                         <div class="flex-mw100px ms-auto d-flex">
 
                           <div class="mw100px d-flex align-items-center me-3">
-                            <select name="" id="" class="form-control">
-                              <option value=""></option>
-                              <option value="">年</option>
-                              <option value="">年</option>
-                              <option value="">年</option>
-                            </select>
+                            <div class="select__wrap">
+                              <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                <option value="">年</option>
+                                <option value="">年</option>
+                                <option value="">年</option>
+                              </select>
+                            </div>
+
                             <span class="ms-3">年</span>
                           </div>
 
                           <div class="mw100px d-flex align-items-center">
-                            <select name="" id="" class="form-control">
-                              <option value=""></option>
-                              <option value="">月</option>
-                              <option value="">月</option>
-                              <option value="">月</option>
-                            </select>
+                            <div class="select__wrap">
+                              <select name="" id="" class="form-control">
+                                <option value=""></option>
+                                <option value="">月</option>
+                                <option value="">月</option>
+                                <option value="">月</option>
+                              </select>
+                            </div>
                             <span class="ms-3">月</span>
                           </div>
                         </div>
@@ -181,8 +195,8 @@
                   <hr>
                 </div>
                 <div class="el__footer d-sm-flex justify-content-center">
-                  <button type="button" class="btn -three mb-3 mb-sm-0 me-3">戻る</button>
-                  <button type="button" class="btn">保存</button>
+                  <button type="button" class="btn -three mb-3 mb-sm-0 me-3">キャンセル</button>
+                  <button type="button" class="btn">上書き</button>
                 </div>
               </form>
           </div>

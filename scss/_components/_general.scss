@@ -100,6 +100,7 @@
 
 }
 .sc__box{
+    width: 100%;
     background: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 0 12px rgba(69, 76, 85, .16%);
@@ -131,12 +132,34 @@
     &__icon{
         width: 82px;
         height: 82px;
-        line-height: 90px;
+        line-height: normal;
         margin: 0 auto 22px;
         background: #F1F1F1;
         border-radius: 50%;
-        font-size: 37px;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ic-bar-chart{
+            &:before{
+                width: 37px;
+                height: 38px;
+            }
+        }
+        .ic-calculator{
+            &:before{
+                width: 38px;
+                height: 46px;
+            }
+        }
+
+        .ic-print{
+            &:before{
+                width: 38px;
+                height: 46px;
+                background-color: #666666;
+            }
+        }
     }
 
 	&.-userinfo{
@@ -305,6 +328,22 @@
                     padding: 0;
                     border: 0;
                 }
+                i{
+                    width: 18px;
+                    // margin-right: 10px;
+                }
+                .ic-edit{
+                    &:before{
+                        width: 18px;
+                        height: 20px;
+                    }
+                }
+                .ic-trash{
+                    &:before{
+                        width: 17px;
+                        height: 20px;
+                    }
+                }
             }
 
             .sorting:before, .sorting:after{
@@ -356,7 +395,7 @@
 
     @media (max-width: 991px){
         .el__label {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
     }
     @media (max-width: 575px){
@@ -555,6 +594,13 @@ table{
     }
     &__content{
         padding: 0 25px;
+        .ic-trash{
+            cursor: pointer;
+            &:before{
+                width: 13px;
+                height: 16px;
+            }
+        }
     }
     &__th{
         padding: 14px 0;    
@@ -630,15 +676,22 @@ table{
             font-weight: 700;
             height: 32px;
             &::before{
-                content: "\e900";
-                font-family: icomoon;
-                font-size: 5px;
-                font-weight: 400;
+                content: "";
                 position: absolute;
-                top: -2px;
+                top: calc(50% - 5px);
                 left: 10px;
-                transform: rotate(180deg);
-                line-height: 32px;
+
+
+                display: inline-block;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                -webkit-mask-size: contain;
+                background-color: #666666;
+                transition: color .5s;
+
+                width: 8px;
+                height: 8px;
+                -webkit-mask-image: url(../img/icon-angle-left.svg);
             }
         }
         
@@ -666,6 +719,16 @@ table{
 
 .modal{
     &.-noti{
+        .modal-content {
+            border-radius: 8px;
+        }
+        .modal-header{
+            padding: 16px 40px 15px;
+        }
+        .modal-title{
+            font-size: 24px;
+            line-height: normal;
+        }
         .modal-body{
             padding: 40px;
             word-break: break-all;
@@ -673,6 +736,9 @@ table{
         .modal-footer{
             padding: 0px 40px 40px;
             border-top: 0;
+            >*{
+                margin: 0;
+            }
         }
         .btn{
             font-size: 12px;
@@ -690,10 +756,10 @@ table{
     @media (max-width: 575px){
         &.-noti{
             .modal-body {
-                padding: 16px;
+                min-height: 175px;
             }
             .modal-footer {
-                padding: 0px 16px 16px;
+
             }
             .btn {
                 min-width: 0;
@@ -725,7 +791,9 @@ table{
         }
     }
     i{
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 60px;
         height: 60px;
         line-height: 60px;
@@ -779,6 +847,13 @@ table{
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 6px;
+        &.ic-plus{
+            &::before {
+                width: 17px;
+                height: 17px;
+                background-color: #fff;
+            }
+        }
     }
 }
 .mb__bukkenfix {
@@ -802,7 +877,7 @@ table{
         background-color: #fff;
         &.active{
             i:before{
-                background-color:$color_primary;
+                background-color:$color_primary!important;
             }
         }
     }
@@ -813,13 +888,34 @@ table{
         height: 100%;
         display: flex;
         align-items: center;
+        &.ic-edit{
+            &:before{
+                width: 18px;
+                height: 20px;
+            }
+        }
+        &.ic-angle-left{
+            &:before{
+                width: 7px;
+                height: 10px;
+            }
+        }
     }
     .-right{
         a, button{
             background-color: $color_primary;
             color: #fff;
+            // &.active{
+            //     i:before{
+            //         background-color:#fff!important;
+            //     }
+            // }
         }
-        
+        i{
+            &:before{
+                background-color: #fff;
+            }
+        }
     }
     &.-modal{
         .-right{
@@ -840,6 +936,14 @@ table{
         i{
             left: 30px;
             font-size: 28px;
+            &.ic-edit:before{
+                width: 26px;
+                height: 28px;
+            }
+            &.ic-trash:before{
+                width: 22px;
+                height: 26px;
+            }
         }
         a, button{
             padding: 32.5px 55px;
@@ -858,7 +962,7 @@ table{
         top: calc(50% - 11px);
 
         &:before{
-            background-color: #CCCCCC;
+            background-color: #CCCCCC!important;
         }
     }
     .ic-search{
@@ -908,12 +1012,21 @@ select{
         padding: 28px 28px 28px 50px;
         box-shadow: inset 0 -1px 0 #F1F1F1;
         &::after{
-            content: "\e905";
-            font-family: 'icomoon';
-            font-size: 10px;
-            line-height: 20px;
-            color: $color_primary;
-            background: none;
+            display: inline-block;
+            width: 17px;
+            height: 11px;
+            background-image: none!important;
+            -webkit-mask-image: url(../img/icon-angle-up.svg);
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            -webkit-mask-size: contain;
+            background-color: $color_primary;
+            // content: "\e905";
+            // font-family: 'icomoon';
+            // font-size: 10px;
+            // line-height: 20px;
+            // color: $color_primary;
+            // background: none;
         }
         &::before{
             content: "";
@@ -928,7 +1041,7 @@ select{
             background-color: #FFF9EF;
             color: #666666;
             &::after{
-                background: none;
+                // background: none;
             }
         }
     }
@@ -1002,6 +1115,14 @@ select{
         &--plus{
             color: $color_secondary;
             text-decoration: underline;
+            .ic-plus{
+                &:before{
+                    top: 0;
+                    width: 11px;
+                    height: 11px;
+
+                }
+            }
         }
     }
 
@@ -1274,7 +1395,7 @@ select{
     }
     .mb__bukkenfix{
         i {
-          left: 20px;
+          left: 16px;
         }
     }
 }

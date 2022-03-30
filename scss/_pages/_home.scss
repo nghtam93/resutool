@@ -9,6 +9,9 @@
 		color: #51A1B9;
 		i{
 			margin-right: 10px;
+			&::before {
+				background-color: #51A1B9;
+			}
 		}
 	}
 }

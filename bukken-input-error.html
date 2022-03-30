@@ -63,6 +63,20 @@
               <h4 class="sc__box__title d-flex align-items-center"><i class="ic-appraisal -size24"></i>新規物件登録</h4>
             </div>
 
+            <div class="alert alert-danger mx-4" role="alert">
+              <ul>
+                <li>業務区分は必ず指定して下さい。</li>
+                <li>対象区分は必ず指定して下さい。</li>
+                <li>年度は必ず指定して下さい。</li>
+                <li>管理番号1は必ず指定して下さい。</li>
+                <li>管理番号2は必ず指定して下さい。</li>
+                <li>市町村コードは必ず指定して下さい。</li>
+                <li>所在は必ず指定して下さい。</li>
+                <li>地番は必ず指定して下さい。</li>
+                <li>登記地積は必ず指定して下さい。</li>
+              </ul>
+            </div>
+
             <div class="accordion" id="accordionBukken">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="heading1">
@@ -76,14 +90,14 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">管理番号</div></div>
                       <div class="col-lg-80">
-                          <input type="text" class="el__input mw170px">
+                          <input type="text" class="el__input mw170px is-invalid">
                       </div>
                     </div><!-- .row -->
                     <hr>
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">業務区分</div></div>
                       <div class="col-lg-80">
-                        <select name="" id="" class="el__input minw170px">
+                        <select name="" id="" class="el__input minw170px is-invalid">
                           <option value=""></option>
                           <option value="">業務区分</option>
                           <option value="">業務区分</option>
@@ -95,7 +109,7 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">対象区分</div></div>
                       <div class="col-lg-80">
-                        <select name="" id="" class="el__input minw170px">
+                        <select name="" id="" class="el__input minw170px is-invalid">
                           <option value=""></option>
                           <option value="">対象区分</option>
                           <option value="">対象区分</option>
@@ -107,7 +121,7 @@
                     <div class="row">
                       <div class="col-lg-20"><div class="el__label">年度</div></div>
                       <div class="col-lg-80 d-flex align-items-center">
-                        <select name="" id="" class="el__input minw100px">
+                        <select name="" id="" class="el__input minw100px is-invalid">
                           <option value=""></option>
                           <option value="">対象区分</option>
                           <option value="">対象区分</option>
