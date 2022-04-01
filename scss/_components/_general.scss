@@ -140,20 +140,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        .ic-bar-chart{
+        .icon-bar-chart{
             &:before{
                 width: 37px;
                 height: 38px;
             }
         }
-        .ic-calculator{
+        .icon-calculator{
             &:before{
                 width: 38px;
                 height: 46px;
             }
         }
 
-        .ic-print{
+        .icon-print{
             &:before{
                 width: 38px;
                 height: 46px;
@@ -332,13 +332,13 @@
                     width: 18px;
                     // margin-right: 10px;
                 }
-                .ic-edit{
+                .icon-edit{
                     &:before{
                         width: 18px;
                         height: 20px;
                     }
                 }
-                .ic-trash{
+                .icon-trash{
                     &:before{
                         width: 17px;
                         height: 20px;
@@ -594,7 +594,7 @@ table{
     }
     &__content{
         padding: 0 25px;
-        .ic-trash{
+        .icon-trash{
             cursor: pointer;
             &:before{
                 width: 13px;
@@ -847,7 +847,7 @@ table{
         font-size: 16px;
         font-weight: 500;
         margin-bottom: 6px;
-        &.ic-plus{
+        &.icon-plus{
             &::before {
                 width: 17px;
                 height: 17px;
@@ -888,13 +888,13 @@ table{
         height: 100%;
         display: flex;
         align-items: center;
-        &.ic-edit{
+        &.icon-edit{
             &:before{
                 width: 18px;
                 height: 20px;
             }
         }
-        &.ic-angle-left{
+        &.icon-angle-left{
             &:before{
                 width: 7px;
                 height: 10px;
@@ -936,11 +936,11 @@ table{
         i{
             left: 30px;
             font-size: 28px;
-            &.ic-edit:before{
+            &.icon-edit:before{
                 width: 26px;
                 height: 28px;
             }
-            &.ic-trash:before{
+            &.icon-trash:before{
                 width: 22px;
                 height: 26px;
             }
@@ -955,7 +955,7 @@ table{
             }
         }
     }
-    .ic-plus-circle-white{
+    .icon-plus-circle-white{
 
         left: auto;
         right: 25px;
@@ -965,7 +965,7 @@ table{
             background-color: #CCCCCC!important;
         }
     }
-    .ic-search{
+    .icon-search{
         top: calc(50% - 7px);
     }
 }
@@ -1115,7 +1115,7 @@ select{
         &--plus{
             color: $color_secondary;
             text-decoration: underline;
-            .ic-plus{
+            .icon-plus{
                 &:before{
                     top: 0;
                     width: 11px;

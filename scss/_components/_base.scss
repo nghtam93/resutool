@@ -192,7 +192,7 @@ input, select{
         //     line-height: 22px;
         //     text-indent: 3px;
         // }
-        .ic-angle-right{
+        .icon-angle-right{
             position: absolute;
             top: 17px;
             right: 18px;
@@ -317,7 +317,7 @@ input, select{
                 font-size: 12px;
                 top: auto;
                 transform: none;
-                &.ic-user{
+                &.icon-user{
                     &:before{
                         width: 15px;
                         height: 15px;
@@ -334,7 +334,7 @@ input, select{
             i{
                 background-color: $color_primary;
             }
-            .ic-duong {
+            .icon-duong {
                 left: 20px;
                 width: 16px;
                 height: 19px;
@@ -350,11 +350,18 @@ input, select{
             &:before{
                 background-color: $color_primary;
             }
-            &.ic-data-capture::before {
+            &.icon-user{
+                width: 20px;
+                &:before{
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &.icon-data-capture::before {
                 width: 13px;
                 height: 17px;
             }
-            &.ic-map{
+            &.icon-map{
                 &::before {
                     width: 19px;
                     height: 21px;

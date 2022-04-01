@@ -1,5 +1,5 @@
 
-[class^="ic-"], [class*=" ic-"] {
+[class^="icon-"], [class*=" icon-"] {
     position: relative;
 	display: inline-block;
     &:before{
@@ -13,7 +13,7 @@
         transition: color .5s;
     }
 }
-.ic{
+.icon{
 	&-home:before{
 		top: 2px;
 	    width: 20px;
@@ -122,8 +122,8 @@
     &-map{
         &:before{
             top: 2px;
-            width: 24px;
-            height: 27px;
+            width: 20px;
+            height: 22px;
             -webkit-mask-image: url(../img/icon-map.svg);
         }
     }
@@ -239,7 +239,7 @@
         display: none;
     }
 }
-.ic-maker-map{
+.icon-maker-map{
     display: inline-block;
     width: 17px;
     height: 26px;
@@ -250,7 +250,7 @@
     position: relative;
     top: -3px;
 }
-.ic-duong{
+.icon-duong{
     display: inline-block;
     width: 20px;
     height: 23px;
@@ -262,7 +262,7 @@
     position: relative;
     top: -2px;
 }
-.ic-search{
+.icon-search{
     display: inline-block;
     width: 14px;
     height: 15px!important;
@@ -275,7 +275,7 @@
     top: -2px;
 }
 
-.ic-plus-circle-white{
+.icon-plus-circle-white{
     display: inline-block;
     width: 22px;
     height: 22px!important;
