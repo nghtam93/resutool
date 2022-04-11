@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Resu Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/favicon.png" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body class="home">
+    <div class="wrapper">
+
+      <div class="header__mb">
+        <div class="header__mb__logout"><a href=""><i class="icon-logout"></i>ログアウト</a></div>
+        <div class="header__mb__logo"><a href=""><img src="images/logo-mb.svg" alt=""></a></div>
+        <div class="header__mb__avatar"><a href=""><img src="images/avatar.png" alt=""></a></div>
+      </div>
+
+      <div class="d-flex">
+
+        <div class="menuLeft">
+          <div class="menuLeft__header">
+            <div class="menuLeft__avatar dnfix__thumb">
+              <a href="">
+                <img src="images/avatar.png" alt="">
+              </a>
+            </div>
+            <p class="menuLeft__username">会員ID●●●●●</p>
+          </div>
+          <div class="menuLeft__content">
+            <div class="main__nav">
+              <ul class="el__menu">
+                <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+                <li class="active"><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+                <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+                <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+                <li><a href=""><i class="icon-logout"></i>ログアウト</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="menuLeft__footer text-center">
+            <a href="" class="menuLeft__logo">
+              <img src="images/logo.svg" alt="">
+            </a>
+            <div class="login__nav">
+              <ul class="justify-content-center">
+                <li><a href="">プライバシー</a></li>
+                <li><a href="">利用規約</a></li>
+                <li><a href="">問合せ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="sc__content">
+
+          <div class="block__action justify-content-center d-lg-none">
+            <ul class="d-flex">
+              <li>
+                <a href="">
+                  <i class="icon-plus"></i>
+                  <p>物件登録</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="icon-data-capture"></i>
+                  <p>データ取込</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="icon-print"></i>
+                  <p>資料印刷</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sc__box -list mb-4">
+            <div class="sc__box__header -small d-flex align-items-center">
+              <h4 class="sc__box__title d-flex align-items-center"><i class="icon-appraisal -size24"></i>登録物件一覧</h4>
+
+              <div class="d-none d-lg-block ms-4">
+                <button class="table__btn me-3"><i class="icon-edit"></i>編集</button>
+                <button class="table__btn"><i class="icon-trash"></i>削除</button>
+              </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="table table-striped table_list -fixedHeader js-table-edit">
+                  <thead class="align-middle">
+                    <tr>
+                      <th class="no-sort">
+                        <label class="checkbox__fake js-checkbox-all">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </th>
+                      <th class="sorting"><div class="d-flex align-items-center">管理番号<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">業務区分<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">対象区分<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">年度<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">都道府県／<br>市区町村CD<span class="sort-icon"></span></div></th>
+                      <th class="no-sort"></th>
+                      <th class="sorting"><div class="d-flex align-items-center">地番<span class="sort-icon"></span></div></th>
+                      <th class="sorting"><div class="d-flex align-items-center">地積<span class="sort-icon"></span></div></th>
+                      <th class="d-none d-sm-table-cell"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000012</td>
+                      <td>マンション</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000011</td>
+                      <td>造成事例</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000010</td>
+                      <td>賃貸事例</td>
+                      <td><a href=""class="el__cat">建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000009</td>
+                      <td>取引事例</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000008</td>
+                      <td>競売</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000007</td>
+                      <td>意見書</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000006</td>
+                      <td>調査報告書</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000005</td>
+                      <td>一般鑑定</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000004</td>
+                      <td>固定資産税</td>
+                      <td><a href=""class="el__cat">土地・建物</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000003</td>
+                      <td>相続税</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000002</td>
+                      <td>地価調査</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label class="checkbox__fake">
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td>0000001</td>
+                      <td>地価公示</td>
+                      <td><a href=""class="el__cat">土地</a></td>
+                      <td>R03</td>
+                      <td>39201</td>
+                      <td>高知市福井町</td>
+                      <td>1611-1</td>
+                      <td>100㎡</td>
+                      <td class="d-none d-sm-table-cell">
+                        <div class="dropdown table__actiion">
+                          <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icon-dots"></i>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="icon-edit"></i> 編集</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="icon-trash"></i> 削除</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+            <nav class="d-none d-md-flex justify-content-center pt-4" aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item prev"><a class="page-link" href="#"><i class="icon-long-arrow-left"></i></a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item next"><a class="page-link active" href="#"><i class="icon-long-arrow-right"></i></a></li>
+              </ul>
+            </nav>
+
+            <nav class="d-flex d-md-none justify-content-center pt-4" aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item prev"><a class="page-link" href="#"><i class="icon-long-arrow-left"></i></a></li>
+                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item next"><a class="page-link active" href="#"><i class="icon-long-arrow-right"></i></a></li>
+              </ul>
+            </nav>
+
+          </div>
+
+          <div class="block__action justify-content-end d-none d-lg-flex">
+            <ul class="d-flex">
+              <li>
+                <a href="">
+                  <i class="icon-plus"></i>
+                  <p>物件登録</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="icon-data-capture"></i>
+                  <p>データ取込</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="icon-print"></i>
+                  <p>資料印刷</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div> <!-- .sc__content -->
+      </div>
+
+      <div class="mb__bukkenfix -table-edit d-lg-none js-table-action-mb">
+        <ul class="row gx-0">
+          <li class="col-6 border-end">
+            <a href=""><i class="icon-edit"></i> 編集</a>
+          </li>
+          <li class="col-6">
+            <a href=""><i class="icon-trash"></i> 削除</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav__mobile">
+        <ul class="nav__mobile--ul">
+          <li><a href="index.html"><i class="icon-home"></i>HOME</a></li>
+          <li class="active"><a href="bukken.html"><i class="icon-appraisal"></i>物件鑑定</a></li>
+          <li><a href="user-info.html"><i class="icon-user"></i>会員情報</a></li>
+          <li><a href=""><i class="icon-bar-chart"></i>地価データ</a></li>
+          <li><a href=""><i class="icon-dots"></i>その他</a></li>
+        </ul>
+      </div>
+
+    </div> <!-- .wrapper -->
+    <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

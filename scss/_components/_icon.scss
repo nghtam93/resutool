@@ -62,11 +62,11 @@
         height: 17px;
         -webkit-mask-image: url(../img/icon-trash.svg);
     }
-    &-arrow-select:before{
+    &-arrow-updown:before{
         top: 2px;
         width: 5px;
         height: 8px;
-        -webkit-mask-image: url(../img/icon-arrow-select.svg);
+        -webkit-mask-image: url(../img/icon-arrow-updown.svg);
     }
     &-plus{
         &:before{
@@ -100,7 +100,7 @@
             top: 2px;
             width: 23px;
             height: 6px;
-            -webkit-mask-image: url(../img/icon-3dot.svg);
+            -webkit-mask-image: url(../img/icon-dots.svg);
         }
     }
     &-angle-left{
@@ -127,12 +127,12 @@
             -webkit-mask-image: url(../img/icon-map.svg);
         }
     }
-    &-map-marker{
+    &-search-address{
         &:before{
             top: 2px;
             width: 14px;
             height: 21px;
-            -webkit-mask-image: url(../img/icon-map-marker.svg);
+            -webkit-mask-image: url(../img/icon-search-address.svg);
         }
     }
     &-picture{
@@ -143,28 +143,28 @@
             -webkit-mask-image: url(../img/icon-picture.svg);
         }
     }
-    &-map-marker2{
+    &-map-other{
         &:before{
             top: 2px;
             width: 14px;
             height: 20px;
-            -webkit-mask-image: url(../img/icon-map-marker2.svg);
+            -webkit-mask-image: url(../img/icon-map-other.svg);
         }
     }
-    &-judgment{
+    &-measure{
         &:before{
             top: 2px;
             width: 18px;
             height: 19px;
-            -webkit-mask-image: url(../img/icon-judgment.svg);
+            -webkit-mask-image: url(../img/icon-measure.svg);
         }
     }
-    &-object{
+    &-shape-judgement{
         &:before{
             top: 2px;
             width: 18px;
             height: 19px;
-            -webkit-mask-image: url(../img/icon-object.svg);
+            -webkit-mask-image: url(../img/icon-shape-judgement.svg);
         }
     }
     &-road{
@@ -175,20 +175,20 @@
             -webkit-mask-image: url(../img/icon-road.svg);
         }
     }
-    &-judgment2{
+    &-measure-route{
         &:before{
             top: 2px;
             width: 23px;
             height: 21px;
-            -webkit-mask-image: url(../img/icon-judgment2.svg);
+            -webkit-mask-image: url(../img/icon-measure-route.svg);
         }
     }
-    &-crosshairs{
+    &-measure-proximity{
         &:before{
             top: 2px;
             width: 24px;
             height: 24px;
-            -webkit-mask-image: url(../img/icon-crosshairs.svg);
+            -webkit-mask-image: url(../img/icon-measure-proximity.svg);
         }
     }
     &-camera{
@@ -215,65 +215,65 @@
             -webkit-mask-image: url(../img/icon-calculator.svg);
         }
     }
-    &-arrow-right-circle, &-angle-right-circle{
+    &-angle-right-circle{
         &:before{
             top: 3px;
             width: 24px;
             height: 24px;
-            -webkit-mask-image: url(../img/icon-arrow-right-circle.svg);
+            -webkit-mask-image: url(../img/icon-angle-right-circle.svg);
         }
     }
-
-}
-
-
-.icon-dots{
-    display: inline-block;
-    width: 23px;
-    height: 6px;
-    -webkit-mask-image: url(../img/3dots.svg);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    background-color: #666666;
-    &:before{
-        display: none;
+    &-long-arrow-left{
+        &:before{
+            top: 3px;
+            width: 14px;
+            height: 14px;
+            -webkit-mask-image: url(../img/icon-long-arrow-left.svg);
+        }
     }
+    &-long-arrow-right{
+        &:before{
+            top: 3px;
+            width: 14px;
+            height: 14px;
+            -webkit-mask-image: url(../img/icon-long-arrow-right.svg);
+        }
+    }
+    &-search{
+        top: -2px;
+        width: 14px;
+        height: 15px;
+        -webkit-mask-image: url(../img/icon-search.svg);
+    }
+
+
 }
-.icon-maker-map{
-    display: inline-block;
-    width: 17px;
-    height: 26px;
-    background: url(../img/map-marker.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    pointer-events: none;
-    position: relative;
-    top: -3px;
-}
-.icon-duong{
-    display: inline-block;
-    width: 20px;
-    height: 23px;
-    -webkit-mask-image: url(../img/duong.svg);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    pointer-events: none;
-    background-color: #666666;
-    position: relative;
-    top: -2px;
-}
-.icon-search{
-    display: inline-block;
-    width: 14px;
-    height: 15px!important;
-    -webkit-mask-image: url(../img/search.svg);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
-    background: #fff;
-    pointer-events: none;
-    position: relative;
-    top: -2px;
-}
+
+
+
+// .icon-maker-map{
+//     display: inline-block;
+//     width: 17px;
+//     height: 26px;
+//     background: url(../img/map-marker.svg);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     pointer-events: none;
+//     position: relative;
+//     top: -3px;
+// }
+// .icon-duong{
+//     display: inline-block;
+//     width: 20px;
+//     height: 23px;
+//     -webkit-mask-image: url(../img/duong.svg);
+//     -webkit-mask-repeat: no-repeat;
+//     -webkit-mask-size: 100% 100%;
+//     pointer-events: none;
+//     background-color: #666666;
+//     position: relative;
+//     top: -2px;
+// }
 
 .icon-plus-circle-white{
     display: inline-block;
@@ -291,7 +291,7 @@
         left: calc( 50% - 4px);
         width: 8px;
         height: 8px;
-        -webkit-mask-image: url(../img/plus.svg);
+        -webkit-mask-image: url(../img/icon-plus-small.svg);
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 100% 100%;
         background: $color_primary;

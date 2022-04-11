@@ -230,7 +230,7 @@ input, select{
             left: 12px;
             width: 5px;
             height: 8px;
-            background: url(../img/arrow-left.svg);
+            background: url(../img/icon-arrow-left-small.svg);
             background-repeat: no-repeat;
             background-size: contain;
             pointer-events: none;
@@ -267,7 +267,7 @@ input, select{
             top: 50%;
             transform: translateY(-50%);
             right: 18px;
-            background-image: url(../img/plus-circle-white.svg);
+            background-image: url(../img/icon-plus-circle-white.svg);
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -334,7 +334,7 @@ input, select{
             i{
                 background-color: $color_primary;
             }
-            .icon-duong {
+            .icon-road {
                 left: 20px;
                 width: 16px;
                 height: 19px;
@@ -458,7 +458,7 @@ input, select{
                 left: 0;
                 width: 20px;
                 height: 20px;
-                background: url(../img/exclamation-triangle.svg);
+                background: url(../img/icon-caution.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
                 pointer-events: none;
